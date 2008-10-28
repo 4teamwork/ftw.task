@@ -7,3 +7,6 @@ from zope.app.container.constraints import containers
 from izug.task import taskMessageFactory as _
 
 # -*- extra stuff goes here -*-
+
+class ITask(Interface):
+    """A type for tasks"""
