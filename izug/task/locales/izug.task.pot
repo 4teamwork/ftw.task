@@ -1,0 +1,68 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2008-11-14 16:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: izug.task\n"
+
+#. Default: "Pick the categories of this item."
+#: ./izug/task/content/task.py:64
+msgid "task_help_categories"
+msgstr ""
+
+#. Default: "Enter the ending date and time, or click the calendar icon and select it."
+#: ./izug/task/content/task.py:55
+msgid "task_help_end_date"
+msgstr ""
+
+#. Default: "Enter the starting date and time, or click the calendar icon and select it."
+#: ./izug/task/content/task.py:44
+msgid "task_help_start_date"
+msgstr ""
+
+#. Default: "Pick the tags of this item."
+#: ./izug/task/content/task.py:84
+msgid "task_help_tags"
+msgstr ""
+
+#: ./izug/task/content/task.py:33
+msgid "task_help_text"
+msgstr ""
+
+#. Default: "Categories"
+#: ./izug/task/content/task.py:63
+msgid "task_label_categories"
+msgstr ""
+
+#. Default: "End of Meeting"
+#: ./izug/task/content/task.py:54
+msgid "task_label_end_date"
+msgstr ""
+
+#. Default: "Start of Meeting"
+#: ./izug/task/content/task.py:43
+msgid "task_label_start_date"
+msgstr ""
+
+#. Default: "Tags"
+#: ./izug/task/content/task.py:83
+msgid "task_label_tags"
+msgstr ""
+
+#. Default: "Text"
+#: ./izug/task/content/task.py:32
+msgid "task_label_text"
+msgstr ""
+

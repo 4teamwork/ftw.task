@@ -1,0 +1,64 @@
+# izug.task
+# Christian Schneider <christian.schneider@4teamwork.ch>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2008-11-14 16:04+0000\n"
+"PO-Revision-Date: 2008-11-14 17:07+0100\n"
+"Last-Translator: Christian Schneider <christian.schneider@4teamwork.ch>\n"
+"Language-Team: Christian Schneider <christian.schneider@4teamwork.ch>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Domain: izug.task\n"
+
+#. Default: "Pick the categories of this item."
+#: izug/task/content/task.py:64
+msgid "task_help_categories"
+msgstr "Wählen Sie die Kategorien dieses Objekts."
+
+#. Default: "Enter the ending date and time, or click the calendar icon and select it."
+#: izug/task/content/task.py:55
+msgid "task_help_end_date"
+msgstr "Setzen Sie das Fälligkeitsdatum der Aufgabe."
+
+#. Default: "Enter the starting date and time, or click the calendar icon and select it."
+#: izug/task/content/task.py:44
+msgid "task_help_start_date"
+msgstr "Setzen Sie das Anfangsdatum der Aufgabe."
+
+#. Default: "Pick the tags of this item."
+#: izug/task/content/task.py:84
+msgid "task_help_tags"
+msgstr "Wählen Sie die Tags für dieses Objekt."
+
+#: izug/task/content/task.py:33
+msgid "task_help_text"
+msgstr "Geben Sie die Beschreibung der Aufgabe ein."
+
+#. Default: "Categories"
+#: izug/task/content/task.py:63
+msgid "task_label_categories"
+msgstr "Kategorien"
+
+#. Default: "End of Meeting"
+#: izug/task/content/task.py:54
+msgid "task_label_end_date"
+msgstr "Fälligkeitsdatum"
+
+#. Default: "Start of Meeting"
+#: izug/task/content/task.py:43
+msgid "task_label_start_date"
+msgstr "Anfangsdatum"
+
+#. Default: "Tags"
+#: izug/task/content/task.py:83
+msgid "task_label_tags"
+msgstr "Tags"
+
+#. Default: "Text"
+#: izug/task/content/task.py:32
+msgid "task_label_text"
+msgstr "Text"
+

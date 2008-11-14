@@ -5,7 +5,7 @@ from zope.interface import implements, directlyProvides
 from Acquisition import aq_inner, aq_parent
 
 from Products.Archetypes import atapi
-from Products.ATContentTypes.content import base
+from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 
 from Products.CMFCore.utils import getToolByName
@@ -18,7 +18,7 @@ from izug.task import taskMessageFactory as _
 from izug.task.interfaces import ITask
 from izug.task.config import PROJECTNAME
 
-TaskSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
+TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
         atapi.TextField('text',
                         searchable = True,
@@ -29,16 +29,39 @@ TaskSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
                         allowable_content_types = ('text/html','text/structured','text/plain'),
                         storage = atapi.AnnotationStorage(),
                         widget = atapi.RichWidget(
-                                                  label = _(u"file_label_text", default=u"Text"),
-                                                  description = _(u"file_help_text", default=u""),
+                                                  label = _(u"task_label_text", default=u"Text"),
+                                                  description = _(u"task_help_text", default=u""),
                                                   ),
                         ),
+
+        atapi.DateTimeField('start_date',
+                            required = False,
+                            searchable = True,
+                            accessor='start',
+                            default_method = DateTime,
+                            storage = atapi.AnnotationStorage(),
+                            widget = atapi.CalendarWidget(label = _(u"task_label_start_date", default=u"Start of Meeting"),
+                                                          description = _(u"task_help_start_date", default=u"Enter the starting date and time, or click the calendar icon and select it."),
+                                                          ),
+                            ),
+    
+        atapi.DateTimeField('end_date',
+                            required = False,
+                            searchable = True,
+                            accessor='end',
+                            default_method = DateTime,
+                            storage = atapi.AnnotationStorage(),
+                            widget = atapi.CalendarWidget(label = _(u"task_label_end_date", default=u"End of Meeting"),
+                                                          description = _(u"task_help_end_date", default=u"Enter the ending date and time, or click the calendar icon and select it."),
+                                                          ),
+                            ),
 
         atapi.ReferenceField('categories',
                              required = False,
                              storage = atapi.AnnotationStorage(),
                              widget=ReferenceBrowserWidget(
-                                                           label=_('Categories'),
+                                                           label=_(u"task_label_categories", default=u"Categories"),
+                                                           description=_(u"task_help_categories", default=u"Pick the categories of this item."),
                                                            allow_browse=False,
                                                            show_results_without_query=True,
                                                            restrict_browsing_to_startup_directory=True,
@@ -57,7 +80,8 @@ TaskSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
                          vocabulary='getAllTags',
                          schemata='default',
                          widget=AddRemoveWidget(
-                                                label=_('Tags'),
+                                                label=_(u"task_label_tags", default=u"Tags"),
+                                                description=_(u"task_help_tags", default=u"Pick the tags of this item."),
                                                 ),
                          ),
 ))
@@ -68,9 +92,9 @@ TaskSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 TaskSchema['title'].storage = atapi.AnnotationStorage()
 TaskSchema['description'].storage = atapi.AnnotationStorage()
 
-schemata.finalizeATCTSchema(TaskSchema, moveDiscussion=False)
+schemata.finalizeATCTSchema(TaskSchema, folderish=True, moveDiscussion=False)
 
-class Task(base.ATCTContent):
+class Task(folder.ATFolder):
     """A type for tasks"""
     implements(ITask)
 
