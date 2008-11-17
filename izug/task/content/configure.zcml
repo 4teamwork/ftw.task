@@ -3,7 +3,20 @@
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="izug.task">
 
-    <!-- configure your content components here -->
+    <five:implements
+        class=".task.Task"
+        interface="izug.blog.interfaces.ICategorizable"
+        />
+
+    <five:implements
+        class=".task.Task"
+        interface="izug.blog.interfaces.IArchivable"
+        />
+
+    <five:implements
+        class=".task.Task"
+        interface="izug.blog.interfaces.ITaggable"
+        />
 
     <!-- -*- extra stuff goes here -*- -->
     <class class=".task.Task">
