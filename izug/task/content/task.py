@@ -56,34 +56,47 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                                                           ),
                             ),
 
-        atapi.ReferenceField('categories',
-                             required = False,
-                             storage = atapi.AnnotationStorage(),
-                             widget=ReferenceBrowserWidget(
-                                                           label=_(u"task_label_categories", default=u"Categories"),
-                                                           description=_(u"task_help_categories", default=u"Pick the categories of this item."),
-                                                           allow_browse=False,
-                                                           show_results_without_query=True,
-                                                           restrict_browsing_to_startup_directory=True,
-                                                           base_query={"portal_type": "Blog Catgory", "sort_on": "sortable_title"},
-                                                           macro='category_reference_widget',
-                                                           ),
-                             allowed_types=('ClassificationItem',),
-                             multiValued=1,
-                             schemata='default',
-                             relationship='blog_categories'
-                             ),
+         atapi.LinesField('responsible',
+                          required = False,
+                          searchable = True,
+                          index = 'KeywordIndex:schema',               
+                          vocabulary = 'getAssignableUsers',
+                          storage = atapi.AnnotationStorage(),
+                          widget = atapi.MultiSelectionWidget(size = 4,
+                                                              label = _(u"ftw_task_label_responsible", default=u"Responsible"),
+                                                              description = _(u"task_help_responsible", default=u"Select the responsible person(s)."),
+                                                              format='checkbox',
+                                                              ),
+                          ),
+                          
+         atapi.ReferenceField('categories',
+                              required = False,
+                              storage = atapi.AnnotationStorage(),
+                              widget=ReferenceBrowserWidget(
+                                                            label=_(u"task_label_categories", default=u"Categories"),
+                                                            description=_(u"task_help_categories", default=u"Pick the categories of this item."),
+                                                            allow_browse=False,
+                                                            show_results_without_query=True,
+                                                            restrict_browsing_to_startup_directory=True,
+                                                            base_query={"portal_type": "Blog Catgory", "sort_on": "sortable_title"},
+                                                            macro='category_reference_widget',
+                                                            ),
+                              allowed_types=('ClassificationItem',),
+                              multiValued=1,
+                              schemata='default',
+                              relationship='blog_categories'
+                              ),
     
-        atapi.LinesField('tags',
-                         multiValued=1,
-                         storage = atapi.AnnotationStorage(),
-                         vocabulary='getAllTags',
-                         schemata='default',
-                         widget=AddRemoveWidget(
-                                                label=_(u"task_label_tags", default=u"Tags"),
-                                                description=_(u"task_help_tags", default=u"Pick the tags of this item."),
-                                                ),
-                         ),
+         atapi.LinesField('tags',
+                          multiValued=1,
+                          storage = atapi.AnnotationStorage(),
+                          vocabulary='getAllTags',
+                          schemata='default',
+                          widget=AddRemoveWidget(
+                                                 label=_(u"task_label_tags", default=u"Tags"),
+                                                 description=_(u"task_help_tags", default=u"Pick the tags of this item."),
+                                                 ),
+                          ),
 ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
@@ -107,6 +120,24 @@ class Task(folder.ATFolder):
     categories = atapi.ATFieldProperty('categories')
     tags = atapi.ATFieldProperty('tags')
 
+    def getAssignableUsers(self):
+        """Collect users with a given role and return them in a list.
+        """
+        role = 'Contributor'
+        results = []
+        pas_tool = getToolByName(self, 'acl_users')
+        utils_tool = getToolByName(self, 'plone_utils')
+
+        for user_id_and_roles in utils_tool.getInheritedLocalRoles(self):
+            user_id = user_id_and_roles[0]
+            # Make sure groups don't get included
+            if not pas_tool.getGroupById(user_id):
+                if role in user_id_and_roles[1]:
+                    user = pas_tool.getUserById(user_id)
+                    results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
+                
+        return (atapi.DisplayList(results))
+        
     #returns the category uid and the parent category uid
     def getCategoryUids(self):
         cats = aq_inner(self).getCategories()
