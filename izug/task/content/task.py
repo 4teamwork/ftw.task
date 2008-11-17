@@ -134,7 +134,8 @@ class Task(folder.ATFolder):
             if not pas_tool.getGroupById(user_id):
                 if role in user_id_and_roles[1]:
                     user = pas_tool.getUserById(user_id)
-                    results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
+                    if user:
+                        results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
                 
         return (atapi.DisplayList(results))
         
