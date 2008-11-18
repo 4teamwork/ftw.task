@@ -104,6 +104,7 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
 TaskSchema['title'].storage = atapi.AnnotationStorage()
 TaskSchema['description'].storage = atapi.AnnotationStorage()
+TaskSchema['description'].widget.visible = {'view' : 'invisible', 'edit' : 'invisible'}
 
 schemata.finalizeATCTSchema(TaskSchema, folderish=True, moveDiscussion=False)
 
