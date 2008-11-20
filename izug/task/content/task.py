@@ -14,6 +14,8 @@ from Products.AddRemoveWidget import AddRemoveWidget
 from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
 from DateTime import DateTime
 
+from izug.arbeitsraum.content.utilities import finalizeIzugSchema
+
 from izug.task import taskMessageFactory as _
 from izug.task.interfaces import ITask
 from izug.task.config import PROJECTNAME
@@ -106,7 +108,7 @@ TaskSchema['title'].storage = atapi.AnnotationStorage()
 TaskSchema['description'].storage = atapi.AnnotationStorage()
 TaskSchema['description'].widget.visible = {'view' : 'invisible', 'edit' : 'invisible'}
 
-schemata.finalizeATCTSchema(TaskSchema, folderish=True, moveDiscussion=False)
+finalizeIzugSchema(TaskSchema, folderish=True, moveDiscussion=False)
 
 class Task(folder.ATFolder):
     """A type for tasks"""

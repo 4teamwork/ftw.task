@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-14 16:04+0000\n"
+"POT-Creation-Date: 2008-11-20 08:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,52 +17,62 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: izug.task\n"
 
+#. Default: "Responsible"
+#: ./izug/task/content/task.py:68
+msgid "ftw_task_label_responsible"
+msgstr ""
+
 #. Default: "Pick the categories of this item."
-#: ./izug/task/content/task.py:64
+#: ./izug/task/content/task.py:79
 msgid "task_help_categories"
 msgstr ""
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
-#: ./izug/task/content/task.py:55
+#: ./izug/task/content/task.py:57
 msgid "task_help_end_date"
 msgstr ""
 
+#. Default: "Select the responsible person(s)."
+#: ./izug/task/content/task.py:69
+msgid "task_help_responsible"
+msgstr ""
+
 #. Default: "Enter the starting date and time, or click the calendar icon and select it."
-#: ./izug/task/content/task.py:44
+#: ./izug/task/content/task.py:46
 msgid "task_help_start_date"
 msgstr ""
 
 #. Default: "Pick the tags of this item."
-#: ./izug/task/content/task.py:84
+#: ./izug/task/content/task.py:99
 msgid "task_help_tags"
 msgstr ""
 
-#: ./izug/task/content/task.py:33
+#: ./izug/task/content/task.py:35
 msgid "task_help_text"
 msgstr ""
 
 #. Default: "Categories"
-#: ./izug/task/content/task.py:63
+#: ./izug/task/content/task.py:78
 msgid "task_label_categories"
 msgstr ""
 
 #. Default: "End of Meeting"
-#: ./izug/task/content/task.py:54
+#: ./izug/task/content/task.py:56
 msgid "task_label_end_date"
 msgstr ""
 
 #. Default: "Start of Meeting"
-#: ./izug/task/content/task.py:43
+#: ./izug/task/content/task.py:45
 msgid "task_label_start_date"
 msgstr ""
 
 #. Default: "Tags"
-#: ./izug/task/content/task.py:83
+#: ./izug/task/content/task.py:98
 msgid "task_label_tags"
 msgstr ""
 
 #. Default: "Text"
-#: ./izug/task/content/task.py:32
+#: ./izug/task/content/task.py:34
 msgid "task_label_text"
 msgstr ""
 
