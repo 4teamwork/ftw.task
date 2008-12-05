@@ -24,8 +24,7 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
         atapi.TextField('text',
                         searchable = True,
-                        required = False,
-                        primary = False,
+                        required = True,
                         default_content_type = 'text/html',              
                         default_output_type = 'text/html',
                         allowable_content_types = ('text/html','text/structured','text/plain'),
@@ -37,7 +36,7 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                         ),
 
         atapi.DateTimeField('start_date',
-                            required = False,
+                            required = True,
                             searchable = True,
                             accessor='start',
                             default_method = DateTime,
@@ -48,7 +47,7 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                             ),
     
         atapi.DateTimeField('end_date',
-                            required = False,
+                            required = True,
                             searchable = True,
                             accessor='end',
                             default_method = DateTime,
@@ -70,35 +69,7 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                                                               format='checkbox',
                                                               ),
                           ),
-                          
-         atapi.ReferenceField('categories',
-                              required = False,
-                              storage = atapi.AnnotationStorage(),
-                              widget=ReferenceBrowserWidget(
-                                                            label=_(u"task_label_categories", default=u"Categories"),
-                                                            description=_(u"task_help_categories", default=u"Pick the categories of this item."),
-                                                            allow_browse=False,
-                                                            show_results_without_query=True,
-                                                            restrict_browsing_to_startup_directory=True,
-                                                            base_query={"portal_type": "Blog Catgory", "sort_on": "sortable_title"},
-                                                            macro='category_reference_widget',
-                                                            ),
-                              allowed_types=('ClassificationItem',),
-                              multiValued=1,
-                              schemata='default',
-                              relationship='blog_categories'
-                              ),
-    
-         atapi.LinesField('tags',
-                          multiValued=1,
-                          storage = atapi.AnnotationStorage(),
-                          vocabulary='getAllTags',
-                          schemata='default',
-                          widget=AddRemoveWidget(
-                                                 label=_(u"task_label_tags", default=u"Tags"),
-                                                 description=_(u"task_help_tags", default=u"Pick the tags of this item."),
-                                                 ),
-                          ),
+
 ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
@@ -120,8 +91,9 @@ class Task(folder.ATFolder):
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
     text = atapi.ATFieldProperty('text')
-    categories = atapi.ATFieldProperty('categories')
-    tags = atapi.ATFieldProperty('tags')
+    start_date = atapi.ATFieldProperty('start_date')
+    end_date = atapi.ATFieldProperty('end_date')
+    responsible = atapi.ATFieldProperty('responsible')
 
     def getAssignableUsers(self):
         """Collect users with a given role and return them in a list.
@@ -141,29 +113,7 @@ class Task(folder.ATFolder):
                         results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
                 
         return (atapi.DisplayList(results))
-        
-    #returns the category uid and the parent category uid
-    def getCategoryUids(self):
-        cats = aq_inner(self).getCategories()
-        uids = [c.UID() for c in cats]
-        parent_uids = []
-        for pc in cats:
-            parent = aq_inner(pc).aq_parent
-            puid = parent.UID()
-            grand_parent = aq_inner(parent).aq_parent
-            if puid not in parent_uids and grand_parent.Type()=='Blog Category':
-                parent_uids.append(puid)
-                DateTime(self.CreationDate()).strftime('%m/%Y')
-        return parent_uids + uids
     
-    def getAllTags(self):
-        catalog = getToolByName(self, "portal_catalog")
-        items = atapi.DisplayList(())
-        for i in catalog.uniqueValuesFor("getTags"):
-            if i and type(i)==type(''):
-                items.add(i,i)
-        return items
-
     def InfosForArchiv(self):
         return DateTime(self.CreationDate()).strftime('%m/01/%Y')
 

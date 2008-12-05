@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2008-11-20 08:14+0000\n"
-"PO-Revision-Date: 2008-11-20 09:15+0100\n"
+"POT-Creation-Date: 2008-12-05 11:44+0000\n"
+"PO-Revision-Date: 2008-12-05 12:45+0100\n"
 "Last-Translator: Christian Schneider <christian.schneider@4teamwork.ch>\n"
 "Language-Team: Christian Schneider <christian.schneider@4teamwork.ch>\n"
 "MIME-Version: 1.0\n"
@@ -14,61 +14,50 @@ msgstr ""
 "Domain: izug.task\n"
 
 #. Default: "Responsible"
-#: izug/task/content/task.py:68
+#: izug/task/content/task.py:67
 msgid "ftw_task_label_responsible"
 msgstr "Verantwortlichkeit"
 
-#. Default: "Pick the categories of this item."
-#: izug/task/content/task.py:79
-msgid "task_help_categories"
-msgstr "Wählen Sie die Kategorien dieser Aufgabe."
-
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
-#: izug/task/content/task.py:57
+#: izug/task/content/task.py:56
 msgid "task_help_end_date"
 msgstr "Setzen Sie das Fälligkeitsdatum der Aufgabe."
 
 #. Default: "Select the responsible person(s)."
-#: izug/task/content/task.py:69
+#: izug/task/content/task.py:68
 msgid "task_help_responsible"
 msgstr "Wählen Sie die/den Verantwortliche/n für diese Aufgabe."
 
 #. Default: "Enter the starting date and time, or click the calendar icon and select it."
-#: izug/task/content/task.py:46
+#: izug/task/content/task.py:45
 msgid "task_help_start_date"
 msgstr "Setzen Sie das Anfangsdatum der Aufgabe."
 
-#. Default: "Pick the tags of this item."
-#: izug/task/content/task.py:99
-msgid "task_help_tags"
-msgstr "Wählen Sie die Tags für diese Aufgabe."
-
-#: izug/task/content/task.py:35
+#: izug/task/content/task.py:34
 msgid "task_help_text"
 msgstr "Geben Sie die Beschreibung der Aufgabe ein."
 
-#. Default: "Categories"
-#: izug/task/content/task.py:78
-msgid "task_label_categories"
-msgstr "Kategorien"
-
 #. Default: "End of Meeting"
-#: izug/task/content/task.py:56
+#: izug/task/content/task.py:55
 msgid "task_label_end_date"
 msgstr "Fälligkeitsdatum"
 
 #. Default: "Start of Meeting"
-#: izug/task/content/task.py:45
+#: izug/task/content/task.py:44
 msgid "task_label_start_date"
 msgstr "Anfangsdatum"
 
-#. Default: "Tags"
-#: izug/task/content/task.py:98
-msgid "task_label_tags"
-msgstr "Tags"
-
 #. Default: "Text"
-#: izug/task/content/task.py:34
+#: izug/task/content/task.py:33
 msgid "task_label_text"
 msgstr "Text"
+
+#~ msgid "task_help_categories"
+#~ msgstr "Wählen Sie die Kategorien dieser Aufgabe."
+#~ msgid "task_help_tags"
+#~ msgstr "Wählen Sie die Tags für diese Aufgabe."
+#~ msgid "task_label_categories"
+#~ msgstr "Kategorien"
+#~ msgid "task_label_tags"
+#~ msgstr "Tags"
 
