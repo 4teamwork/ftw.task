@@ -13,9 +13,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Domain: izug.task\n"
 
-#. Default: "Responsible"
+#. Default: "Responsibility"
 #: izug/task/content/task.py:67
-msgid "ftw_task_label_responsible"
+msgid "ftw_task_label_responsibility"
 msgstr "Verantwortlichkeit"
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
@@ -23,9 +23,9 @@ msgstr "Verantwortlichkeit"
 msgid "task_help_end_date"
 msgstr "Setzen Sie das Fälligkeitsdatum der Aufgabe."
 
-#. Default: "Select the responsible person(s)."
+#. Default: "Select the responsibility person(s)."
 #: izug/task/content/task.py:68
-msgid "task_help_responsible"
+msgid "task_help_responsibility"
 msgstr "Wählen Sie die/den Verantwortliche/n für diese Aufgabe."
 
 #. Default: "Enter the starting date and time, or click the calendar icon and select it."

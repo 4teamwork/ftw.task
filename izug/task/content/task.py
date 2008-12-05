@@ -57,15 +57,15 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                                                       ),
                         ),
 
-     atapi.LinesField('responsible',
+     atapi.LinesField('responsibility',
                       required = False,
                       searchable = True,
                       index = 'KeywordIndex:schema',               
                       vocabulary = 'getAssignableUsers',
                       storage = atapi.AnnotationStorage(),
                       widget = atapi.MultiSelectionWidget(size = 4,
-                                                          label = _(u"ftw_task_label_responsible", default=u"Responsible"),
-                                                          description = _(u"task_help_responsible", default=u"Select the responsible person(s)."),
+                                                          label = _(u"ftw_task_label_responsibility", default=u"Responsibility"),
+                                                          description = _(u"task_help_responsibility", default=u"Select the responsible person(s)."),
                                                           format='checkbox',
                                                           ),
                       ),
@@ -93,7 +93,7 @@ class Task(folder.ATFolder):
     text = atapi.ATFieldProperty('text')
     start_date = atapi.ATFieldProperty('start_date')
     end_date = atapi.ATFieldProperty('end_date')
-    responsible = atapi.ATFieldProperty('responsible')
+    responsible = atapi.ATFieldProperty('responsibility')
 
     def getAssignableUsers(self):
         """Collect users with a given role and return them in a list.
