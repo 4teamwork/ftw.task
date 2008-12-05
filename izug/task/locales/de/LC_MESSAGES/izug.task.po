@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2008-12-05 11:44+0000\n"
-"PO-Revision-Date: 2008-12-05 12:45+0100\n"
+"PO-Revision-Date: 2008-12-05 17:21+0100\n"
 "Last-Translator: Christian Schneider <christian.schneider@4teamwork.ch>\n"
 "Language-Team: Christian Schneider <christian.schneider@4teamwork.ch>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. Default: "Responsibility"
 #: izug/task/content/task.py:67
-msgid "ftw_task_label_responsibility"
+msgid "task_label_responsibility"
 msgstr "Verantwortlichkeit"
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."

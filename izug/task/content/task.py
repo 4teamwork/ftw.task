@@ -64,7 +64,7 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                       vocabulary = 'getAssignableUsers',
                       storage = atapi.AnnotationStorage(),
                       widget = atapi.MultiSelectionWidget(size = 4,
-                                                          label = _(u"ftw_task_label_responsibility", default=u"Responsibility"),
+                                                          label = _(u"task_label_responsibility", default=u"Responsibility"),
                                                           description = _(u"task_help_responsibility", default=u"Select the responsible person(s)."),
                                                           format='checkbox',
                                                           ),

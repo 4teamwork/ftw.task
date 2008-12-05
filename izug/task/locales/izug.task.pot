@@ -18,7 +18,7 @@ msgstr ""
 
 #. Default: "Responsibility"
 #: ./izug/task/content/task.py:67
-msgid "ftw_task_label_responsibility"
+msgid "task_label_responsibility"
 msgstr ""
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
