@@ -81,6 +81,11 @@ TaskSchema['description'].widget.visible = {'view' : 'invisible', 'edit' : 'invi
 
 finalizeIzugSchema(TaskSchema, folderish=True, moveDiscussion=False)
 
+TaskSchema.changeSchemataForField('effectiveDate','settings')
+TaskSchema.changeSchemataForField('expirationDate','settings')
+TaskSchema['effectiveDate'].widget.visible = {'view' : 'invisible', 'edit' : 'invisible'}
+TaskSchema['expirationDate'].widget.visible = {'view' : 'invisible', 'edit' : 'invisible'}
+
 class Task(folder.ATFolder):
     """A type for tasks"""
     implements(ITask)
