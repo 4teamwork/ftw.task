@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="izug.arbeitsraum">
+
+<body>
+<metal:block fill-slot="column_two_slot" />
+<div metal:fill-slot="main" class="arbeitsraum_view">
+    <metal:main-macro define-macro="main">
+      <div>
+		  	<metal:block metal:use-macro="here/@@custom_header/macros/header | here/base/macros/header" />
+
+			<table class="MeetingListing">
+				<tr>
+					<td class="table-label" i18n:translate="">Title</td>
+					<td tal:content="here/Title" />
+				</tr>
+				<tr>
+					<td class="table-label" i18n:translate="">Text</td>
+					<td tal:content="structure here/getText" />
+				</tr>
+				<tr>
+					<td i18n:translate="">End</td>
+					<td tal:content="python: here.toLocalizedTime(here.end())"></td>
+				</tr>
+				<tr>
+					<td i18n:translate="" >responsibility</td>
+					<td tal:content="python: ','.join([r for r in context.getResponsibility()])"></td>
+				</tr>
+			</table>
+
+
+      <div tal:replace="structure provider:plone.belowcontentbody" />
+  </metal:main-macro>
+</div>
+
+</body>
+</html>
