@@ -12,12 +12,7 @@
         class=".task.Task"
         interface="izug.blog.interfaces.IArchivable"
         />
-
-    <five:implements
-        class=".task.Task"
-        interface="izug.tagging.interfaces.tagging.ITaggable"
-        />
-
+        
     <!-- -*- extra stuff goes here -*- -->
     <class class=".task.Task">
 

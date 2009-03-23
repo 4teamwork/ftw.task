@@ -52,6 +52,16 @@ msgstr "Anfangsdatum"
 msgid "task_label_text"
 msgstr "Text"
 
+#. Default: "Text"
+#: izug/task/content/task.py:33
+msgid "task_label_related_items"
+msgstr "Referenzen"
+
+#. Default: "Text"
+#: izug/task/content/task.py:33
+msgid "task_help_related_items"
+msgstr "Wählen Sie die Verweise auf verwandte Objekte aus"
+
 #~ msgid "task_help_categories"
 #~ msgstr "Wählen Sie die Kategorien dieser Aufgabe."
 #~ msgid "task_help_tags"

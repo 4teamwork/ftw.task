@@ -5,7 +5,7 @@ from zope.interface import implements, directlyProvides
 from Acquisition import aq_inner, aq_parent
 
 from Products.Archetypes import atapi
-from Products.ATContentTypes.content import folder
+from Products.ATContentTypes.content import document
 from Products.ATContentTypes.content import schemata
 
 from Products.CMFCore.utils import getToolByName
@@ -20,14 +20,13 @@ from izug.task import taskMessageFactory as _
 from izug.task.interfaces import ITask
 from izug.task.config import PROJECTNAME
 
-TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
+TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
 
     atapi.TextField('text',
                     searchable = True,
                     required = True,
                     default_content_type = 'text/html',              
                     default_output_type = 'text/html',
-                    allowable_content_types = ('text/html','text/structured','text/plain'),
                     storage = atapi.AnnotationStorage(),
                     widget = atapi.RichWidget(
                                               label = _(u"task_label_text", default=u"Text"),
@@ -69,6 +68,25 @@ TaskSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                                                           format='checkbox',
                                                           ),
                       ),
+    atapi.ReferenceField('related_items',
+                         relationship = 'relatesTo',
+                         multiValued = True,
+                         isMetadata = True,
+                         languageIndependent = False,
+                         index = 'KeywordIndex',
+                         accessor = 'relatedItems',
+                         storage = atapi.AnnotationStorage(),
+                         schemata = 'default',
+                         widget = ReferenceBrowserWidget(
+                                                         allow_search = True,
+                                                         allow_browse = True,
+                                                         show_indexes = False,
+                                                         force_close_on_insert = True,
+                                                         label = _(u"task_label_related_items", default=u"Related Items"),
+                                                         description = _(u"task_help_related_items", default=u""),
+                                                         visible = {'edit' : 'visible', 'view' : 'invisible' }
+                                                         ),
+                         ),
 
 ))
 
@@ -86,7 +104,7 @@ TaskSchema.changeSchemataForField('expirationDate','settings')
 TaskSchema['effectiveDate'].widget.visible = {'view' : 'invisible', 'edit' : 'invisible'}
 TaskSchema['expirationDate'].widget.visible = {'view' : 'invisible', 'edit' : 'invisible'}
 
-class Task(folder.ATFolder):
+class Task(document.ATDocument):
     """A type for tasks"""
     implements(ITask)
 
