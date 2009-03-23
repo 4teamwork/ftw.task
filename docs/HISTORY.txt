@@ -1,8 +1,7 @@
 Changelog
 =========
 
-1.0 - Unreleased
-----------------
-
-* Initial release
-
+23.03.2009
+----------
+* iZug Task: #285 - Aufgabe können keine Inhalte mehr enthalten [vba]
+* iZug Task: #273 - Neue Standardwerte für Anfangs- und Endzeit (09:00; 17:00) [vba]
