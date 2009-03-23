@@ -14,9 +14,9 @@
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types"></property>  
   <property name="allow_discussion">False</property>
-  <property name="default_view">base_view</property>
+  <property name="default_view">task_view</property>
   <property name="view_methods">
-    <element value="base_view" />
+    <element value="task_view" />
   </property>
   <alias from="(Default)" to="(dynamic view)" />
   <alias from="edit" to="atct_edit" />
