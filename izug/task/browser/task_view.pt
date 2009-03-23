@@ -32,7 +32,7 @@
 				</tr>
 			</table>
 
-
+      <div metal:use-macro="here/document_relateditems/macros/relatedItems"></div>
       <div tal:replace="structure provider:plone.belowcontentbody" />
   </metal:main-macro>
 </div>
