@@ -38,7 +38,7 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
                         required = True,
                         searchable = True,
                         accessor='start',
-                        default_method = DateTime,
+                        default_method = 'default_start_date',
                         storage = atapi.AnnotationStorage(),
                         widget = atapi.CalendarWidget(label = _(u"task_label_start_date", default=u"Start of Meeting"),
                                                       description = _(u"task_help_start_date", default=u"Enter the starting date and time, or click the calendar icon and select it."),
@@ -49,7 +49,7 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
                         required = True,
                         searchable = True,
                         accessor='end',
-                        default_method = DateTime,
+                        default_method = 'default_end_date',
                         storage = atapi.AnnotationStorage(),
                         widget = atapi.CalendarWidget(label = _(u"task_label_end_date", default=u"End of Meeting"),
                                                       description = _(u"task_help_end_date", default=u"Enter the ending date and time, or click the calendar icon and select it."),
@@ -141,5 +141,13 @@ class Task(document.ATDocument):
     
     def InfosForArchiv(self):
         return DateTime(self.CreationDate()).strftime('%m/01/%Y')
+
+    def default_start_date(self):
+        a = DateTime()
+        return DateTime(a.year(), a.month(), a.day(), 9, 00 )
+
+    def default_end_date(self):
+        a = DateTime()
+        return DateTime(a.year(), a.month(), a.day(), 17, 00 )
 
 atapi.registerType(Task, PROJECTNAME)
