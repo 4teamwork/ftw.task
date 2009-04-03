@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<object name="portal_catalog" meta_type="Plone Catalog Tool">
- <index name="responsibility" meta_type="FieldIndex">
-  <indexed_attr value="responsibility"/>
- </index>
-
-</object>
