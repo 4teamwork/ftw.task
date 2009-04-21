@@ -18,6 +18,12 @@
 					<td class="table-label" i18n:translate="">Title</td>
 					<td tal:content="here/Title" />
 				</tr>
+                                <tr>
+                                        <td class="table-label" i18n:translate="">State</td>
+                                        <td i18:domain="plone" i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" />
+                                </tr>
+
+
 				<tr>
 					<td class="table-label" i18n:translate="">Text</td>
 					<td tal:content="structure here/getText" />
