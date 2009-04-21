@@ -27,3 +27,12 @@ msgstr "Inhaltstyp für Aufgaben."
 msgid "Task"
 msgstr "Aufgabe"
 
+msgid "active"
+msgstr "aktiv"
+
+msgid "inactive"
+msgstr "inaktiv"
+
+msgid "resolved"
+msgstr "erledigt"
+
