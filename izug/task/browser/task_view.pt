@@ -16,11 +16,11 @@
 			<table class="MeetingListing">
 				<tr>
 					<td class="table-label" i18n:translate="">Title</td>
-					<td tal:content="here/Title" />
+					<td><p tal:content="here/Title" /></td>
 				</tr>
                                 <tr>
                                         <td class="table-label" i18n:translate="">State</td>
-                                        <td i18:domain="plone" i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" />
+                                        <td i18n:domain="plone"><p i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" /></td>
                                 </tr>
 
 
@@ -29,12 +29,12 @@
 					<td tal:content="structure here/getText" />
 				</tr>
 				<tr>
-					<td i18n:translate="">End</td>
-					<td tal:content="python: here.toLocalizedTime(here.end())"></td>
+					<td class="table-label" i18n:translate="">End</td>
+					<td><p tal:content="python: here.toLocalizedTime(here.end())"/></td>
 				</tr>
 				<tr>
-					<td i18n:translate="" >responsibility</td>
-					<td tal:content="python: ','.join([r for r in context.getResponsibility()])"></td>
+					<td class="table-label" i18n:translate="" >responsibility</td>
+					<td><p tal:content="python: ','.join([r for r in context.getResponsibility()])" /> </td>
 				</tr>
 			</table>
 
