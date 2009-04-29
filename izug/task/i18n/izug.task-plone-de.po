@@ -34,5 +34,10 @@ msgid "Resolved"
 msgstr "Abgeschlossen"
 
 msgid "resolved"
-msgstr "Abgeschlossen"
+msgstr "abgeschlossen"
 
+msgid "active"
+msgstr "in Bearbeitung"
+
+msgid "inactive"
+msgstr "offen"
