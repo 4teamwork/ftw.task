@@ -138,6 +138,18 @@ class Task(document.ATDocument):
                         results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
                 
         return (atapi.DisplayList(results))
+
+    def setResponsibility(self, value, **kwargs):
+        me = self.portal_membership.getAuthenticatedMember().getId()
+        for m in self.getResponsibility():
+          if me != m:
+            self.portal_membership.deleteLocalRoles(obj = self, member_ids=[m,])
+
+        for m in value:
+            self.portal_membership.setLocalRoles( obj=self, member_ids=[m,], member_role='Owner')
+
+        self.getField('responsibility').set(self,value,**kwargs)  
+
     
     def InfosForArchiv(self):
         return DateTime(self.CreationDate()).strftime('%m/01/%Y')
