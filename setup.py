@@ -8,7 +8,8 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '1.0'
+version = '0.1-dev'
+maintainer = 'Victor Baumann'
 
 long_description = (
     read('README.txt')
@@ -36,7 +37,7 @@ tests_require=['zope.testing']
 
 setup(name='izug.task',
       version=version,
-      description="Task type for iZug",
+      description="Task type for iZug (Maintainer: %s)",
       long_description=long_description,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -45,10 +46,10 @@ setup(name='izug.task',
         'Topic :: Software Development :: Libraries :: Python Modules',
         ],
       keywords='plone archetype izug',
-      author='Christian Schneider, 4teamwork GmbH',
-      author_email='christian.schneider@4teamwork.ch',
-      url='https://svn.4teamwork.ch/repos/zug/izug.task',
-      license='Copyright 2008, 4teamwork GmbH',
+      author='%s, 4teamwork GmbH' % maintainer,
+      author_email='mailto:info@4teamwork.ch',
+      url='http://psc.4teamwork.ch/4teamwork/kunden/izug/izug.task/',
+      license='GPL2',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['izug', ],
       include_package_data=True,
