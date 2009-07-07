@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.2
+---
+
+
+
 0.1
 ---
     * iZug Task: #285 - Aufgabe können keine Inhalte mehr enthalten [23.03.2009, vba]
