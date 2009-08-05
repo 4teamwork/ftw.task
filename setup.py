@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '0.2-dev'
+version = open('izug/task/version.txt').read().strip()
 maintainer = 'Victor Baumann'
 
 long_description = (
