@@ -20,6 +20,8 @@ from izug.task import taskMessageFactory as _
 from izug.task.interfaces import ITask
 from izug.task.config import PROJECTNAME
 
+from izug.utils.users import getAssignableUsers
+
 TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
 
     atapi.TextField('text',
@@ -119,25 +121,7 @@ class Task(document.ATDocument):
     responsible = atapi.ATFieldProperty('responsibility')
 
     def getAssignableUsers(self):
-        """Collect users with a given role and return them in a list.
-        """
-        role = 'Contributor'
-        results = []
-        pas_tool = getToolByName(self, 'acl_users')
-        utils_tool = getToolByName(self, 'plone_utils')
-
-        for user_id_and_roles in utils_tool.getInheritedLocalRoles(self):
-            if user_id_and_roles[2] == 'user':
-                if role in user_id_and_roles[1]:
-                    user = pas_tool.getUserById(user_id_and_roles[0])
-                    if user:
-                        results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
-            if user_id_and_roles[2] == 'group':
-                if role in user_id_and_roles[1]:
-                    for user in pas_tool.getGroupById(user_id_and_roles[0]).getGroupMembers():
-                        results.append((user.getId(), '%s (%s)' % (user.getProperty('fullname', ''), user.getId())))
-                
-        return (atapi.DisplayList(results))
+        return getAssignableUsers(self,'Contributor')
 
     def setResponsibility(self, value, **kwargs):
         me = self.portal_membership.getAuthenticatedMember().getId()
