@@ -146,4 +146,14 @@ class Task(document.ATDocument):
         a = DateTime()
         return DateTime(a.year(), a.month(), a.day(), 17, 00 )
 
+    def get_fullname(self, userid):
+        pas_tool = getToolByName(self, 'acl_users')
+        user = pas_tool.getUserById(userid)
+        if user:
+            return user.getProperty('fullname', userid)
+        return userid
+        
+    def sortable_responsibility(self):
+        return ','.join([self.get_fullname(r) for r in self.getResponsibility()])
+
 atapi.registerType(Task, PROJECTNAME)
