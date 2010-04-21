@@ -32,9 +32,18 @@
 					<td class="table-label" i18n:translate="">End</td>
 					<td><p tal:content="python: here.toLocalizedTime(here.end())"/></td>
 				</tr>
-				<tr>
+				<tr tal:define="userids python: view.getResponsibilityInfos(context.getResponsibility())">
 					<td class="table-label" i18n:translate="" >responsibility</td>
-					<td><p tal:content="python: ','.join([r for r in context.getResponsibility()])" /> </td>
+					<td>
+					    <ul class="AttendeesListing">
+                            <li tal:repeat="userid userids">
+                                <tal:exists condition="python:len(userid['url'])>0">
+                                    <a tal:attributes="href python:userid['url']" tal:content="python:userid['name']" />
+                                </tal:exists>
+                                <span tal:condition="python:len(userid['url'])==0" tal:content="python:userid['name']" />
+                            </li>
+                        </ul>
+					</td>
 				</tr>
 			</table>
 
