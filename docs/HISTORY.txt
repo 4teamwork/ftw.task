@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.4
+1.0
 ---
 
 * Issue #835 Arbeitsraum - 1 oder mehrere Verantwortliche pro Termin definieren
