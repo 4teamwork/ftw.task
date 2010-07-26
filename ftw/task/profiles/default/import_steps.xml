@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="ftw.task.catalog"
+               version="20080715-01"
+               handler="ftw.task.setuphandlers.add_indexes"
+               title="ftw Task: index import ">
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>

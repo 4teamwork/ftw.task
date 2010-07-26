@@ -1,0 +1,5 @@
+setuptools
+plone.principalsource
+
+[tests]
+zope.testing

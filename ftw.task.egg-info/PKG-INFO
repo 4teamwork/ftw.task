@@ -1,0 +1,85 @@
+Metadata-Version: 1.0
+Name: ftw.task
+Version: 1.0c3-devdev
+Summary: Task type (Maintainer: %s)
+Home-page: http://psc.4teamwork.ch/4teamwork/kunden/ftw/ftw.task/
+Author: Victor Baumann, 4teamwork GmbH
+Author-email: mailto:info@4teamwork.ch
+License: GPL2
+Description: .. contents::
+        
+        .. Note!
+           -----
+           Update the following URLs to point to your:
+        
+           - code repository
+           - bug tracker
+           - questions/comments feedback mail
+           (do not set a real mail, to avoid spams)
+        
+           Or remove it if not used.
+        
+        - Code repository: http://svn.somewhere.com/...
+        - Questions and comments to somemailing_list
+        - Report bugs at http://bug.somewhere.com/..
+        
+        
+        Change history
+        **************
+        
+        Changelog
+        =========
+        
+        
+        1.0c3
+        -----
+        
+        * Fixed import error in setup.py
+          [22.06.2010, jbaumann]
+        
+        
+        1.0c2
+        -----
+        
+        * Use docs/HISTORY.txt / remove CONTRIBUTORS.txt
+          [18.06.2010, jbaumann]
+        
+        
+        1.0
+        ---
+        
+        * Issue #835 Arbeitsraum - 1 oder mehrere Verantwortliche pro Termin definieren
+          https://extranet.4teamwork.ch/support/zug/maintlog/835/
+          [21.04.2010, jinfanger]
+        
+        
+        0.3
+        ---
+        
+        0.2
+        ---
+        
+        * [10.08.2009] Issue #583 auf Funktion in izug.utils verwiesen [jin]
+        
+        
+        0.1
+        ---
+            * iZug Task: #285 - Aufgabe können keine Inhalte mehr enthalten [23.03.2009, vba]
+            * iZug Task: #273 - Neue Standardwerte für Anfangs- und Endzeit (09:00; 17:00) [23.03.2009, vba]
+        
+        Detailed Documentation
+        **********************
+        
+        Introduction
+        ============
+        
+        
+        
+        Download
+        ********
+        
+Keywords: plone archetype ftw
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

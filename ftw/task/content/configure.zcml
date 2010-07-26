@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="ftw.task">
+
+    <!-- -*- extra stuff goes here -*- -->
+    <class class=".task.Task">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.ITask"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.ITask"
+            />
+
+    </class>
+
+</configure>

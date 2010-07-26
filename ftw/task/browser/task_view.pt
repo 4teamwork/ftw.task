@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="ftw.task">
+
+<body>
+<metal:block fill-slot="column_two_slot" />
+<div metal:fill-slot="main" class="arbeitsraum_view">
+    <metal:main-macro define-macro="main">
+        <metal:header_macro define-macro="header"
+                            tal:define="kssClassesView context/@@kss_field_decorator_view;
+                       getKssClasses nocall:kssClassesView/getKssClassesInlineEditable">
+
+          <div tal:replace="structure provider:plone.abovecontenttitle" />
+      
+          <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
+              Title or id
+          </h1>
+
+          <div tal:replace="structure provider:plone.belowcontenttitle" />
+        </metal:header_macro>
+      <div>
+            <table class="MeetingListing">
+                <tr>
+                    <td class="table-label" i18n:translate="">Title</td>
+                    <td><p tal:content="here/Title" /></td>
+                </tr>
+                                <tr>
+                                        <td class="table-label" i18n:translate="">State</td>
+                                        <td i18n:domain="plone"><p i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" /></td>
+                                </tr>
+
+
+                <tr>
+                    <td class="table-label" i18n:translate="">Text</td>
+                    <td tal:content="structure here/getText" />
+                </tr>
+                <tr>
+                    <td class="table-label" i18n:translate="">End</td>
+                    <td><p tal:content="python: here.toLocalizedTime(here.end())"/></td>
+                </tr>
+                <tr tal:define="userids python: view.getResponsibilityInfos(context.getResponsibility())">
+                    <td class="table-label" i18n:translate="" >responsibility</td>
+                    <td>
+                        <ul class="AttendeesListing">
+                            <li tal:repeat="userid userids">
+                                <tal:exists condition="python:len(userid['url'])>0">
+                                    <a tal:attributes="href python:userid['url']" tal:content="python:userid['name']" />
+                                </tal:exists>
+                                <span tal:condition="python:len(userid['url'])==0" tal:content="python:userid['name']" />
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div metal:use-macro="here/document_relateditems/macros/relatedItems"></div>
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+  </metal:main-macro>
+</div>
+
+</body>
+</html>

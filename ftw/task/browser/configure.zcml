@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ftw.task">
+
+    <include package="plone.app.contentmenu" />
+
+    <!-- -*- extra stuff goes here -*- -->
+    <browser:page
+        for="Products.Archetypes.interfaces.IBaseObject"
+        name="task_view"
+        class=".views.TaskView"
+        permission="zope2.View"
+        template="task_view.pt"
+        />
+</configure>
