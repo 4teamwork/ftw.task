@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+2.0
+---
+* renamed from izug.task to ftw.task, made changes for plone4 support
+
+
 1.0c3
 -----
 
