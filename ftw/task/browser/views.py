@@ -1,6 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 
+
 def getUserInfos(context, userid):
     mt = getToolByName(context, 'portal_membership')
     user = mt.getMemberById(userid)
@@ -10,6 +11,7 @@ def getUserInfos(context, userid):
                 'url': '%s/author/%s' % (context.portal_url(), user.id), }
     else:
         return {'name': userid, 'url': ''}
+
 
 class TaskView(BrowserView):
 
@@ -24,4 +26,3 @@ class TaskView(BrowserView):
         else:
             result.append(getUserInfos(context, userids))
         return result
-
