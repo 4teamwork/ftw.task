@@ -50,6 +50,7 @@ setup(name='ftw.task',
       include_package_data=True,
       zip_safe=False,
       install_requires=['setuptools',
+        'Products.ATReferenceBrowserWidget',
                         'plone.principalsource',
                         # -*- Extra requirements: -*-
                         ],
