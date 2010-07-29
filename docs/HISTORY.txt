@@ -4,6 +4,7 @@ Changelog
 
 2.0
 ---
+* rebuild Translations
 * renamed from izug.task to ftw.task, made changes for plone4 support
 
 

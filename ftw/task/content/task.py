@@ -25,9 +25,9 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
                     default_output_type = 'text/html',
                     storage = atapi.AnnotationStorage(),
                     widget = atapi.RichWidget(
-                                              label = _(u"task_label_text", default=u"Text"),
-                                              description = _(u"task_help_text", default=u""),
-                                              ),
+                              label = _(u"task_label_text", default=u"Text"),
+                              description = _(u"task_help_text", default=u""),
+                            ),
                     ),
 
     atapi.DateTimeField('start_date',
@@ -36,9 +36,9 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
                         accessor='start',
                         default_method = 'default_start_date',
                         storage = atapi.AnnotationStorage(),
-                        widget = atapi.CalendarWidget(label = _(u"task_label_start_date", default=u"Start of Meeting"),
+                        widget = atapi.CalendarWidget(label = _(u"task_label_start_date", default=u"Start of Task"),
                                                       description = _(u"task_help_start_date", default=u"Enter the starting date and time, or click the calendar icon and select it."),
-                                                      visible = {'edit' : 'invisible', 'view' : 'invisible' },
+                                                      visible = {'edit' : 'invisible', 'view' : 'invisible'},
                                                       ),
                         ),
 
@@ -48,7 +48,7 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
                         accessor='end',
                         default_method = 'default_end_date',
                         storage = atapi.AnnotationStorage(),
-                        widget = atapi.CalendarWidget(label = _(u"task_label_end_date", default=u"End of Meeting"),
+                        widget = atapi.CalendarWidget(label = _(u"task_label_end_date", default=u"End of Task"),
                                                       description = _(u"task_help_end_date", default=u"Enter the ending date and time, or click the calendar icon and select it."),
                                                       ),
                         ),
@@ -141,7 +141,6 @@ class Task(document.ATDocument):
 
         self.getField('responsibility').set(self,value,**kwargs)  
 
-    
     def InfosForArchiv(self):
         return DateTime(self.CreationDate()).strftime('%m/01/%Y')
 
@@ -159,7 +158,7 @@ class Task(document.ATDocument):
         if user:
             return user.getProperty('fullname', userid)
         return userid
-        
+
     def sortable_responsibility(self):
         return ','.join([self.get_fullname(r) for r in self.getResponsibility()])
 
