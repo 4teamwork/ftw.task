@@ -31,7 +31,7 @@ tests_require=['zope.testing']
 
 setup(name='ftw.task',
       version=version,
-      description="Task type (Maintainer: %s)",
+      description="Task type (Maintainer: %s)" % maintainer,
       long_description=long_description,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
