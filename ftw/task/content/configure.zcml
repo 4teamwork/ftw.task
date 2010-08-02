@@ -11,11 +11,6 @@
             interface="..interfaces.ITask"
             />
 
-        <require
-            permission="cmf.ModifyPortalContent"
-            set_schema="..interfaces.ITask"
-            />
-
     </class>
 
 </configure>
