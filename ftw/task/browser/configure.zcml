@@ -9,8 +9,8 @@
     <browser:page
         for="Products.Archetypes.interfaces.IBaseObject"
         name="task_view"
-        class=".views.TaskView"
+        class=".task.TaskView"
         permission="zope2.View"
-        template="task_view.pt"
+        template="task.pt"
         />
 </configure>

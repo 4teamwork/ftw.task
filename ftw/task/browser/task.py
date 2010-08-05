@@ -3,6 +3,7 @@ from Products.Five.browser import BrowserView
 
 
 def getUserInfos(context, userid):
+    """ return a dict with userinformations, about the user """
     mt = getToolByName(context, 'portal_membership')
     user = mt.getMemberById(userid)
 
@@ -14,6 +15,7 @@ def getUserInfos(context, userid):
 
 
 class TaskView(BrowserView):
+    """ The View, wich schow all infos about the Task """
 
     def getResponsibilityInfos(self, userids):
         context = self.context

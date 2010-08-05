@@ -10,7 +10,7 @@
   <property name="product">ftw.task</property>
   <property name="factory">addTask</property>
   <property name="immediate_view">atct_edit</property>
-  <property name="global_allow">False</property>
+  <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types"></property>  
   <property name="allow_discussion">False</property>

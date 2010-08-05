@@ -8,6 +8,7 @@ ADD_PERMISSIONS = {
     'Task': 'ftw.task: Add Task',
 }
 
+# TODO : is a index necessarily ?
 INDEXES = (("responsibility", "FieldIndex"),
           )
 
