@@ -27,7 +27,9 @@ long_description = (
     '********\n'
     )
 
-tests_require=['zope.testing']
+tests_require = [
+    'collective.testcaselayer',
+    ]
 
 setup(name='ftw.task',
       version=version,
