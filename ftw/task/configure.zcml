@@ -16,18 +16,26 @@
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
-      name="default"
-      title="ftw.task"
-      directory="profiles/default"
-      description="Task type"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
+        name="default"
+        title="ftw.task"
+        directory="profiles/default"
+        description="Task type"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <!-- Register the import step -->
+    <genericsetup:importStep
+        name="ftw.task"
+        title="ftw.task special import handlers"
+        description=""
+        handler="ftw.task.setuphandlers.import_various" />
+
 
     <!-- -*- extra stuff goes here -*- -->
 
-    <utility 
-      component=".vocabularies.AvailableUsersVocabularyFactory" 
-      name="ftw.task.users"
-      />
+    <utility
+        component=".vocabularies.AvailableUsersVocabularyFactory"
+        name="ftw.task.users"
+        />
 
 </configure>
