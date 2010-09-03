@@ -62,7 +62,6 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
     atapi.LinesField('responsibility',
         required = False,
         searchable = True,
-        index = 'KeywordIndex:schema',
         vocabulary_factory="ftw.task.users",
         storage = atapi.AnnotationStorage(),
         widget = atapi.MultiSelectionWidget(size = 4,
@@ -73,6 +72,7 @@ TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
             format='checkbox',
         ),
     ),
+
     atapi.ReferenceField('related_items',
         relationship = 'relatesTo',
         multiValued = True,
