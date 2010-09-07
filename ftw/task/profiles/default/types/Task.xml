@@ -4,7 +4,7 @@
    i18n:domain="ftw.task" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
   <property name="title" i18n:translate="">Task</property>
   <property name="description"
-    i18n:translate="">A type for tasks.</property>
+    i18n:translate=""></property>
   <property name="content_meta_type">Task</property>
   <property name="content_icon">document_icon.gif</property>
   <property name="product">ftw.task</property>
