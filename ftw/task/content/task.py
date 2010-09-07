@@ -174,4 +174,7 @@ class Task(document.ATDocument):
             return user.getProperty('fullname', userid)
         return userid
 
+    def canSetDefaultPage(self):
+        return False
+
 atapi.registerType(Task, PROJECTNAME)
