@@ -5,6 +5,9 @@ Changelog
 2.0
 ---
 
+* Cleanup Task content type module, removed AnnotationStorage from some fields
+  [08.09.2010, jbaumann]
+
 * Fixed catalog stuff, renamed 'responsibility' index to 'getResponsibility'
   [02.09.2010, jbaumann]
 

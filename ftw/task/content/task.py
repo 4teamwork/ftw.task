@@ -1,107 +1,96 @@
 """Definition of the Task content type
 """
 
-from zope.interface import implements
-
-from Products.Archetypes import atapi
+from DateTime import DateTime
 from Products.ATContentTypes.content import document
 from Products.ATContentTypes.content.schemata import finalizeATCTSchema
-
-from Products.CMFCore.utils import getToolByName
-
 from Products.ATReferenceBrowserWidget import ATReferenceBrowserWidget
-from DateTime import DateTime
-
+from Products.Archetypes import atapi
+from Products.CMFCore.utils import getToolByName
 from ftw.task import taskMessageFactory as _
-from ftw.task.interfaces import ITask
 from ftw.task.config import PROJECTNAME
+from ftw.task.interfaces import ITask
+from zope.interface import implements
 
-TaskSchema = document.ATDocumentSchema.copy() + atapi.Schema((
 
-    atapi.TextField('text',
-        searchable = True,
-        required = True,
-        default_content_type = 'text/html',
-        default_output_type = 'text/html',
-        storage = atapi.AnnotationStorage(),
-        widget = atapi.RichWidget(
-            label = _(u"task_label_text", default=u"Text"),
-            description = _(u"task_help_text", default=u""),
-            ),
-        ),
+TaskSchema = document.ATDocumentSchema.copy() + \
+    atapi.Schema((
 
-    atapi.DateTimeField('start_date',
-        required = True,
-        searchable = True,
-        accessor='start',
-        default_method = 'default_start_date',
-        storage = atapi.AnnotationStorage(),
-        widget = atapi.CalendarWidget(
-            label = _(u"task_label_start_date", default=u"Start of Task"),
-            description = _(u"task_help_start_date",
-                default=u"Enter the starting date and time,\
-                          or click the calendar icon and select it."),
-            visible = {'edit': 'invisible', 'view': 'invisible'},
-            ),
-    ),
+        atapi.TextField(
+            name='text',
+            searchable=True,
+            required=True,
+            default_content_type='text/html',
+            default_output_type='text/html',
+            storage=atapi.AnnotationStorage(),
+            widget=atapi.RichWidget(
+                label=_(u"task_label_text", default=u"Text"),
+                description=_(u"task_help_text", default=u""))),
 
-    atapi.DateTimeField('end_date',
-        required = True,
-        searchable = True,
-        accessor='end',
-        default_method = 'default_end_date',
-        storage = atapi.AnnotationStorage(),
-        widget = atapi.CalendarWidget(
-            label = _(u"task_label_end_date", default=u"End of Task"),
-            description = _(u"task_help_end_date",
-                default=u"Enter the ending date and time, \
-                          or click the calendar icon and select it."),
-            ),
-        ),
+        atapi.DateTimeField(
+            name='start_date',
+            required=True,
+            searchable=True,
+            accessor='start',
+            default_method='default_start_date',
+            widget=atapi.CalendarWidget(
+                label=_(u"task_label_start_date", default=u"Start of Task"),
+                description=_(u"task_help_start_date",
+                              default=u"Enter the starting date and time, "
+                              "or click the calendar icon and select it."),
+                visible = {'edit': 'invisible', 'view': 'invisible'})),
 
-    atapi.LinesField('responsibility',
-        required = False,
-        searchable = True,
-        vocabulary_factory="ftw.task.users",
-        storage = atapi.AnnotationStorage(),
-        widget = atapi.MultiSelectionWidget(size = 4,
-            label = _(u"task_label_responsibility",
-                     default=u"Responsibility"),
-            description = _(u"task_help_responsibility",
-                           default=u"Select the responsible person(s)."),
-            format='checkbox',
-        ),
-    ),
+        atapi.DateTimeField(
+            name='end_date',
+            required = True,
+            searchable = True,
+            accessor='end',
+            default_method = 'default_end_date',
+            widget = atapi.CalendarWidget(
+                label = _(u"task_label_end_date", default=u"End of Task"),
+                description = _(u"task_help_end_date",
+                                default=u"Enter the ending date and time, \
+                          or click the calendar icon and select it."))),
 
-    atapi.ReferenceField('related_items',
-        relationship = 'relatesTo',
-        multiValued = True,
-        isMetadata = True,
-        languageIndependent = False,
-        index = 'KeywordIndex',
-        storage = atapi.AnnotationStorage(),
-        schemata = 'default',
-        widget = ATReferenceBrowserWidget.ReferenceBrowserWidget(
-            allow_search = True,
-            allow_browse = True,
-            show_indexes = False,
-            force_close_on_insert = True,
-            label = _(u"task_label_related_items", default=u"Related Items"),
-            description = _(u"task_help_related_items", default=u""),
-            visible = {'edit': 'visible', 'view': 'invisible'}
-            ),
-        ),
-))
+        atapi.LinesField(
+            name='responsibility',
+            required = False,
+            searchable = True,
+            vocabulary_factory="ftw.task.users",
+            widget = atapi.MultiSelectionWidget(
+                size = 4,
+                label = _(u"task_label_responsibility",
+                          default=u"Responsibility"),
+                description = _(u"task_help_responsibility",
+                                default=u"Select the responsible person(s)."),
+                format='checkbox')),
+
+        atapi.ReferenceField(
+            name='related_items',
+            relationship = 'relatesTo',
+            multiValued = True,
+            isMetadata = True,
+            languageIndependent = False,
+            index = 'KeywordIndex',
+            schemata = 'default',
+            widget = ATReferenceBrowserWidget.ReferenceBrowserWidget(
+                allow_search = True,
+                allow_browse = True,
+                show_indexes = False,
+                force_close_on_insert = True,
+                label = _(u"task_label_related_items", default=u"Related Items"),
+                description = _(u"task_help_related_items", default=u""),
+                visible = {'edit': 'visible', 'view': 'invisible'})),
+
+        ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
 # they work well with the python bridge properties.
 
 TaskSchema = finalizeATCTSchema(TaskSchema,
-                        folderish=True,
-                        moveDiscussion=False)
+                                folderish=True,
+                                moveDiscussion=False)
 
-TaskSchema['title'].storage = atapi.AnnotationStorage()
-TaskSchema['description'].storage = atapi.AnnotationStorage()
 TaskSchema['description'].widget.visible = {'view': 'invisible',
                                             'edit': 'invisible'}
 
@@ -133,12 +122,7 @@ class Task(document.ATDocument):
     portal_type = "Task"
     schema = TaskSchema
 
-    title = atapi.ATFieldProperty('title')
-    description = atapi.ATFieldProperty('description')
     text = atapi.ATFieldProperty('text')
-    start_date = atapi.ATFieldProperty('start_date')
-    end_date = atapi.ATFieldProperty('end_date')
-    responsible = atapi.ATFieldProperty('responsibility')
 
     def setResponsibility(self, value, **kwargs):
         """ set Owner role for the responsibility User"""
@@ -149,7 +133,7 @@ class Task(document.ATDocument):
 
         for m in value:
             self.portal_membership.setLocalRoles(obj=self,
-                member_ids=[m, ], member_role='Owner')
+                                                 member_ids=[m, ], member_role='Owner')
 
         self.getField('responsibility').set(self, value, **kwargs)
 
