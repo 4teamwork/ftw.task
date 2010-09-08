@@ -55,7 +55,7 @@ msgid "task_help_related_items"
 msgstr ""
 
 #. Default: "Select the responsible person(s)."
-#: ./ftw/task/content/task.py:71
+#: ./ftw/task/content/task.py:70
 msgid "task_help_responsibility"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgid "task_label_related_items"
 msgstr ""
 
 #. Default: "Responsibility"
-#: ./ftw/task/content/task.py:69
+#: ./ftw/task/content/task.py:68
 msgid "task_label_responsibility"
 msgstr ""
 

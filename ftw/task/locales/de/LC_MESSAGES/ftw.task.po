@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-08-12 09:52+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2010-09-03 14:28+0000\n"
+"PO-Revision-Date: 2010-09-03 16:28+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ./ftw/task/profiles/default/types/Task.xml
 msgid "A type for tasks."
-msgstr "Ein Typ für Aufgaben"
+msgstr ""
 
 #: ./ftw/task/browser/task.pt:42
 msgid "End"
@@ -42,7 +42,6 @@ msgstr "Zuständigkeit"
 
 #. Default: "Enter the ending date and time,                           or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:56
-#, fuzzy
 msgid "task_help_end_date"
 msgstr "Geben sie das Enddatum ein oder klicken sie auf das Kalender Icon und wählen sie es aus"
 
@@ -51,13 +50,12 @@ msgid "task_help_related_items"
 msgstr ""
 
 #. Default: "Select the responsible person(s)."
-#: ./ftw/task/content/task.py:71
+#: ./ftw/task/content/task.py:70
 msgid "task_help_responsibility"
 msgstr "Wählen sie die zuständige(n) Persone(n) aus."
 
 #. Default: "Enter the starting date and time,                          or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:41
-#, fuzzy
 msgid "task_help_start_date"
 msgstr "Geben sie das Startdatum ein oder klicken sie auf das Kalender Icon und wählen sie es aus"
 
@@ -76,7 +74,7 @@ msgid "task_label_related_items"
 msgstr "Verweise"
 
 #. Default: "Responsibility"
-#: ./ftw/task/content/task.py:69
+#: ./ftw/task/content/task.py:68
 msgid "task_label_responsibility"
 msgstr "Zuständigkeit"
 
