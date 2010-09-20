@@ -60,6 +60,8 @@ setup(name='ftw.task',
       extras_require=dict(tests=tests_require),
       test_suite = 'ftw.task.tests.test_docs.test_suite',
       entry_points="""
-      # -*- entry_points -*- 
+      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )
