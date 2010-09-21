@@ -30,7 +30,7 @@
                 </tr>
                                 <tr>
                                         <td class="table-label" i18n:translate="">State</td>
-                                        <td i18n:domain="plone"><p i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" /></td>
+                                        <td><p i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" /></td>
                                 </tr>
 
 

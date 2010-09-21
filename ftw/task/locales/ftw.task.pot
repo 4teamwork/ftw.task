@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-08-12 09:52+0000\n"
+"POT-Creation-Date: 2010-09-21 14:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,55 +41,64 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+msgid "active"
+msgstr ""
+
+msgid "inactive"
+msgstr ""
+
+msgid "resolved"
+msgstr ""
+
 #: ./ftw/task/browser/task.pt:46
 msgid "responsibility"
 msgstr ""
 
 #. Default: "Enter the ending date and time,                           or click the calendar icon and select it."
-#: ./ftw/task/content/task.py:56
+#: ./ftw/task/content/task.py:51
 msgid "task_help_end_date"
 msgstr ""
 
-#: ./ftw/task/content/task.py:90
+#: ./ftw/task/content/task.py:82
 msgid "task_help_related_items"
 msgstr ""
 
 #. Default: "Select the responsible person(s)."
-#: ./ftw/task/content/task.py:70
+#: ./ftw/task/content/task.py:64
 msgid "task_help_responsibility"
 msgstr ""
 
-#. Default: "Enter the starting date and time,                          or click the calendar icon and select it."
-#: ./ftw/task/content/task.py:41
+#. Default: "Enter the starting date and time, or click the calendar icon and select it."
+#: ./ftw/task/content/task.py:38
 msgid "task_help_start_date"
 msgstr ""
 
-#: ./ftw/task/content/task.py:29
+#: ./ftw/task/content/task.py:28
 msgid "task_help_text"
 msgstr ""
 
 #. Default: "End of Task"
-#: ./ftw/task/content/task.py:55
+#: ./ftw/task/content/task.py:50
 msgid "task_label_end_date"
 msgstr ""
 
 #. Default: "Related Items"
-#: ./ftw/task/content/task.py:89
+#: ./ftw/task/content/task.py:81
 msgid "task_label_related_items"
 msgstr ""
 
 #. Default: "Responsibility"
-#: ./ftw/task/content/task.py:68
+#: ./ftw/task/content/task.py:62
 msgid "task_label_responsibility"
 msgstr ""
 
 #. Default: "Start of Task"
-#: ./ftw/task/content/task.py:40
+#: ./ftw/task/content/task.py:37
 msgid "task_label_start_date"
 msgstr ""
 
 #. Default: "Text"
-#: ./ftw/task/content/task.py:28
+#: ./ftw/task/content/task.py:27
 msgid "task_label_text"
 msgstr ""
 
