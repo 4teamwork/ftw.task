@@ -33,7 +33,7 @@ msgid "Title"
 msgstr "Titel"
 
 msgid "active"
-msgstr "Aktive"
+msgstr "Aktiv"
 
 msgid "inactive"
 msgstr "Inaktiv"
