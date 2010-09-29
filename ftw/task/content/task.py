@@ -19,7 +19,7 @@ TaskSchema = document.ATDocumentSchema.copy() + \
         atapi.TextField(
             name='text',
             searchable=True,
-            required=True,
+            required=False,
             default_content_type='text/html',
             default_output_type='text/html',
             storage=atapi.AnnotationStorage(),
@@ -91,28 +91,23 @@ TaskSchema = finalizeATCTSchema(TaskSchema,
                                 folderish=True,
                                 moveDiscussion=False)
 
-TaskSchema['description'].widget.visible = {'view': 'invisible',
-                                            'edit': 'invisible'}
-
-TaskSchema.changeSchemataForField('effectiveDate', 'settings')
-TaskSchema.changeSchemataForField('expirationDate', 'settings')
-TaskSchema['effectiveDate'].widget.visible = {'view': 'invisible',
-                                              'edit': 'invisible'}
-TaskSchema['expirationDate'].widget.visible = {'view': 'invisible',
-                                               'edit': 'invisible'}
-
-#finalize the schema
-TaskSchema.changeSchemataForField('subject', 'settings')
-TaskSchema.changeSchemataForField('location', 'settings')
-TaskSchema['location'].widget.visible = -1
-TaskSchema.changeSchemataForField('language', 'settings')
-TaskSchema['language'].widget.visible = -1
-TaskSchema.changeSchemataForField('creators', 'settings')
-TaskSchema['creators'].widget.visible = -1
-TaskSchema.changeSchemataForField('contributors', 'settings')
-TaskSchema['contributors'].widget.visible = -1
-TaskSchema.changeSchemataForField('rights', 'settings')
-TaskSchema['rights'].widget.visible = -1
+hide_fields = ['description',
+                'effectiveDate',
+                'expirationDate',
+                'subject',
+                'location',
+                'language',
+                'creators',
+                'contributors',
+                'rights',
+                'presentation',
+                'tableContents',
+                'allowDiscussion',
+                'excludeFromNav',
+                ]
+for item in hide_fields:
+    TaskSchema.changeSchemataForField(item, 'default')
+    TaskSchema[item].widget.visible = -1
 
 
 class Task(document.ATDocument):
