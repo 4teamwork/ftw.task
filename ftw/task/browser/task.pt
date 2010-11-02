@@ -43,7 +43,7 @@
                     <td><p tal:content="python: here.toLocalizedTime(here.end())"/></td>
                 </tr>
                 <tr tal:define="userids python: view.getResponsibilityInfos(context.getResponsibility())">
-                    <td class="table-label" i18n:translate="" >responsibility</td>
+                    <td class="table-label" i18n:translate="">responsibility</td>
                     <td>
                         <ul class="AttendeesListing">
                             <li tal:repeat="userid userids">
