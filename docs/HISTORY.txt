@@ -2,9 +2,10 @@ Changelog
 =========
 
 
-1.0c4
------
-
+2.1
+---
+* Issue #398 Kontakt zu Arbeitsraum hinzufuegen (so wie bei iZug Arbeitsraum)
+  [02.11.2010, jinfanger]
 
 2.0
 ---
