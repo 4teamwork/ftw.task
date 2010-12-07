@@ -4,5 +4,11 @@
      of this file for more information.
   -->
 <portlets>
-  <!-- -*- extra stuff goes here -*- -->
+
+  <portlet
+    addview="ftw.task.portlets.mytasks"
+    title="My Tasks Portlet"
+    description="Shows task the current user is responsible for"
+  />
+
 </portlets>

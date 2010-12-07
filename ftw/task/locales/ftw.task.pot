@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-09-22 07:33+0000\n"
+"POT-Creation-Date: 2010-12-07 12:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,32 @@ msgstr ""
 msgid "active"
 msgstr ""
 
+#. Default: "My Tasks"
+#: ./ftw/task/portlets/mytasks.pt:7
+msgid "box_mytasks"
+msgstr ""
+
+#. Default: "No items."
+#: ./ftw/task/portlets/mytasks.pt:34
+msgid "box_no_task_items"
+msgstr ""
+
+#. Default: "This portlet displays the user's tasks."
+#: ./ftw/task/portlets/mytasks.py:71
+msgid "help_add_mytasks_portlet"
+msgstr ""
+
 msgid "inactive"
+msgstr ""
+
+#. Default: "Add My Tasks Portlet"
+#: ./ftw/task/portlets/mytasks.py:69
+msgid "label_add_mytasks_portlet"
+msgstr ""
+
+#. Default: "My Tasks Portlet"
+#: ./ftw/task/portlets/mytasks.py:33
+msgid "label_mytasks_portlet"
 msgstr ""
 
 msgid "resolved"

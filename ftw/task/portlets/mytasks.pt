@@ -1,0 +1,39 @@
+<dl class="portlet mytasks"
+    i18n:domain="ftw.task"
+    tal:define="items view/items">
+
+    <dt class="portletHeader clearfix">
+	  <span class="portletTopLeft"></span>
+      	<span class="title"
+          i18n:translate="box_mytasks">My Tasks</span>
+      <span class="portletTopRight"></span>
+    
+    </dt>
+
+    <tal:items tal:repeat="item items">
+
+        <dd class="portletItem" 
+            tal:define="oddrow repeat/item/odd;"
+            tal:attributes="class python:oddrow and  'portletItem even' or 'portletItem odd';
+                            id string:${item/id}">
+            <span class="title">
+                <a href=""
+                   tal:attributes="href item/getURL;
+                                   title item/Title;">
+                    <tal:title content="item/Title">
+                        Title
+                    </tal:title>
+                </a>
+            </span>
+        </dd>
+    </tal:items>
+
+    <dd class="portletItemEmpty portletItem" 
+        tal:condition="not:items">
+        
+        <span class="noEntries" i18n:translate="box_no_task_items">
+            No items.
+        </span>
+    </dd>
+
+</dl>
