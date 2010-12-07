@@ -13,7 +13,6 @@
       interface=".mytasks.IMyTasksPortlet"
       assignment=".mytasks.Assignment"
       view_permission="zope2.View"
-      edit_permission="cmf.ManagePortal"
       renderer=".mytasks.Renderer"
       addview="ftw.task.portlets.mytasks.AddForm"
       />
