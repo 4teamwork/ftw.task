@@ -56,7 +56,6 @@ class Renderer(base.Renderer):
 
     @property
     def items(self):
-        import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
         mt = getToolByName(self.context, 'portal_membership')
         member = mt.getAuthenticatedMember()
