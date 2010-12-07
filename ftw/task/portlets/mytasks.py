@@ -56,11 +56,12 @@ class Renderer(base.Renderer):
 
     @property
     def items(self):
+        import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
         mt = getToolByName(self.context, 'portal_membership')
         member = mt.getAuthenticatedMember()
         username = member.getUserName()
-        tasks = catalog(portal_type="Task", responsibility=username)
+        tasks = catalog(portal_type="Task", getResponsibility=username)
         return tasks
 
 
