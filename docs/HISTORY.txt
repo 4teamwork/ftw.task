@@ -5,6 +5,8 @@ Changelog
 2.3
 ---
 
+* Added plone.po file
+  [01.06.2011, ttschanz]
 
 2.2
 ---

@@ -14,7 +14,7 @@ msgstr ""
 
 #: ./ftw/task/browser/task.pt:42
 msgid "End"
-msgstr "Ende"
+msgstr "Fälligkeit"
 
 #: ./ftw/task/browser/task.pt:32
 msgid "State"
