@@ -5,6 +5,8 @@ Changelog
 2.3.1
 -----
 
+- Use plone default classes for table.
+  [Julian Infanger]
 
 2.3
 ---

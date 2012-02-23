@@ -23,7 +23,7 @@
       <div tal:replace="structure provider:plone.belowcontenttitle" />
     </metal:header_macro>
       <div>
-            <table class="MeetingListing">
+            <table class="vertical listing MeetingListing">
                 <tr>
                     <td class="table-label" i18n:translate="">Title</td>
                     <td><p tal:content="here/Title" /></td>
