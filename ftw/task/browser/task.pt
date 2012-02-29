@@ -15,7 +15,7 @@
                    getKssClasses nocall:kssClassesView/getKssClassesInlineEditable">
 
       <div tal:replace="structure provider:plone.abovecontenttitle" />
-      
+
       <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
           Title or id
       </h1>
@@ -23,7 +23,7 @@
       <div tal:replace="structure provider:plone.belowcontenttitle" />
     </metal:header_macro>
       <div>
-            <table class="vertical listing MeetingListing">
+            <table class="vertical listing taskListing">
                 <tr>
                     <td class="table-label" i18n:translate="">Title</td>
                     <td><p tal:content="here/Title" /></td>
