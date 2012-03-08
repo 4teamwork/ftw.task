@@ -5,6 +5,9 @@ Changelog
 2.3.1
 -----
 
+- Use th instead of td.table_label for heading in vertical listing table.
+  [Julian Infanger]
+
 - Use plone default classes for table.
   [Julian Infanger]
 

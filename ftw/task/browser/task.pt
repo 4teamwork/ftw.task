@@ -25,25 +25,25 @@
       <div>
             <table class="vertical listing taskListing">
                 <tr>
-                    <td class="table-label" i18n:translate="">Title</td>
+                    <th i18n:translate="">Title</th>
                     <td><p tal:content="here/Title" /></td>
                 </tr>
                                 <tr>
-                                        <td class="table-label" i18n:translate="">State</td>
+                                        <th i18n:translate="">State</th>
                                         <td><p i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" /></td>
                                 </tr>
 
 
                 <tr>
-                    <td class="table-label" i18n:translate="">Text</td>
+                    <th i18n:translate="">Text</th>
                     <td tal:content="structure here/getText" />
                 </tr>
                 <tr>
-                    <td class="table-label" i18n:translate="">End</td>
+                    <th i18n:translate="">End</th>
                     <td><p tal:content="python: here.toLocalizedTime(here.end())"/></td>
                 </tr>
                 <tr tal:define="userids python: view.getResponsibilityInfos(context.getResponsibility())">
-                    <td class="table-label" i18n:translate="">responsibility</td>
+                    <th i18n:translate="">responsibility</th>
                     <td>
                         <ul class="AttendeesListing">
                             <li tal:repeat="userid userids">
