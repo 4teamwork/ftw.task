@@ -29,7 +29,16 @@ long_description = (
 
 tests_require = [
     'collective.testcaselayer',
+    'ftw.testing',
+    'ftw.workspace',
+    'ftw.pdfgenerator'
     ]
+
+extras_require = {
+    'tests': tests_require,
+    'pdf': [
+        'ftw.pdfgenerator',
+        ]}
 
 setup(name='ftw.task',
       version=version,
@@ -57,7 +66,7 @@ setup(name='ftw.task',
                         # -*- Extra requirements: -*-
                         ],
       tests_require=tests_require,
-      extras_require=dict(tests=tests_require),
+      extras_require=extras_require,
       test_suite = 'ftw.task.tests.test_docs.test_suite',
       entry_points="""
       # -*- Entry points: -*-
