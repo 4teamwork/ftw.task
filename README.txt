@@ -1,17 +1,36 @@
-.. contents::
+Introduction
+============
 
-.. Note!
-   -----
-   Update the following URLs to point to your:
+``ftw.task`` provides a simple task content type for plone.
 
-   - code repository
-   - bug tracker
-   - questions/comments feedback mail
-   (do not set a real mail, to avoid spams)
 
-   Or remove it if not used.
+Usage
+=====
 
-- Code repository: http://svn.somewhere.com/...
-- Questions and comments to somemailing_list
-- Report bugs at http://bug.somewhere.com/..
+- Add the package to your buildout configuration:
 
+::
+
+    [instance]
+    eggs +=
+        ...
+        ftw.task
+
+- Install the generic setup profile.
+
+
+Links
+=====
+
+- Continuous integration: https://jenkins.4teamwork.ch/job/ftw.meeting/
+
+
+Copyright and License
+=====================
+
+This package is copyright by `4teamwork GmbH <http://www.4teamwork.ch/>`_
+
+``ftw.task`` is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
