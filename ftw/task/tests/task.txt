@@ -10,6 +10,7 @@ No we test, if the Responsibility have autmaticly owner rights
 
 first, we create the user hugoboss, because he would be the responsible of the task
     >>> self.portal.acl_users._doAddUser('hugoboss', 'secret', ['Contributer'], [])
+    <PloneUser 'hugoboss'>
     >>> self.portal.manage_setLocalRoles('hugoboss', ('Contributor', 'Editor'))
 
 then we create a task, and set 'hugoboss' as responsible
@@ -22,4 +23,3 @@ and now we check if the user 'hugoboss' has the owner role
     >>> local_roles = dict(t2.get_local_roles())
     >>> local_roles.get('hugoboss')
     ('Owner',)
-
