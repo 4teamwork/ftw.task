@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-12-07 12:44+0000\n"
+"POT-Creation-Date: 2012-03-16 07:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "box_no_task_items"
 msgstr ""
 
 #. Default: "This portlet displays the user's tasks."
-#: ./ftw/task/portlets/mytasks.py:71
+#: ./ftw/task/portlets/mytasks.py:70
 msgid "help_add_mytasks_portlet"
 msgstr ""
 
@@ -59,13 +59,38 @@ msgid "inactive"
 msgstr ""
 
 #. Default: "Add My Tasks Portlet"
-#: ./ftw/task/portlets/mytasks.py:69
+#: ./ftw/task/portlets/mytasks.py:68
 msgid "label_add_mytasks_portlet"
 msgstr ""
 
 #. Default: "My Tasks Portlet"
 #: ./ftw/task/portlets/mytasks.py:33
 msgid "label_mytasks_portlet"
+msgstr ""
+
+#. Default: "Tasks"
+#: ./ftw/task/latex/workspace.py:29
+msgid "latex_label_events"
+msgstr ""
+
+#. Default: "Date"
+#: ./ftw/task/latex/templates/tasks_listing.pt:18
+msgid "latex_tasks_date"
+msgstr ""
+
+#. Default: "Responsibility"
+#: ./ftw/task/latex/templates/tasks_listing.pt:27
+msgid "latex_tasks_responsibility"
+msgstr ""
+
+#. Default: "State"
+#: ./ftw/task/latex/templates/tasks_listing.pt:21
+msgid "latex_tasks_state"
+msgstr ""
+
+#. Default: "Title"
+#: ./ftw/task/latex/templates/tasks_listing.pt:24
+msgid "latex_tasks_title"
 msgstr ""
 
 msgid "resolved"

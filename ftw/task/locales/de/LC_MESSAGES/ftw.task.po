@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-12-07 12:44+0000\n"
+"POT-Creation-Date: 2012-03-16 07:45+0000\n"
 "PO-Revision-Date: 2010-09-03 16:28+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgid "box_no_task_items"
 msgstr "Keine Aufgaben."
 
 #. Default: "This portlet displays the user's tasks."
-#: ./ftw/task/portlets/mytasks.py:71
+#: ./ftw/task/portlets/mytasks.py:70
 msgid "help_add_mytasks_portlet"
 msgstr "Dieses Portlet zeigt die dem Benutzer zugewiesenen Aufgaben an."
 
@@ -54,7 +54,7 @@ msgid "inactive"
 msgstr "Inaktiv"
 
 #. Default: "Add My Tasks Portlet"
-#: ./ftw/task/portlets/mytasks.py:69
+#: ./ftw/task/portlets/mytasks.py:68
 msgid "label_add_mytasks_portlet"
 msgstr "Meine Aufgaben Portlet hinzufügen"
 
@@ -63,6 +63,31 @@ msgstr "Meine Aufgaben Portlet hinzufügen"
 msgid "label_mytasks_portlet"
 msgstr "Meine Aufgaben Portlet"
 
+#. Default: "Tasks"
+#: ./ftw/task/latex/workspace.py:29
+msgid "latex_label_events"
+msgstr "Aufgaben"
+
+#. Default: "Date"
+#: ./ftw/task/latex/templates/tasks_listing.pt:18
+msgid "latex_tasks_date"
+msgstr "Datum"
+
+#. Default: "Responsibility"
+#: ./ftw/task/latex/templates/tasks_listing.pt:27
+msgid "latex_tasks_responsibility"
+msgstr "Verantwortlich"
+
+#. Default: "State"
+#: ./ftw/task/latex/templates/tasks_listing.pt:21
+msgid "latex_tasks_state"
+msgstr "Status"
+
+#. Default: "Title"
+#: ./ftw/task/latex/templates/tasks_listing.pt:24
+msgid "latex_tasks_title"
+msgstr "Titel"
+
 msgid "resolved"
 msgstr "Abgeschlossen"
 
@@ -70,8 +95,9 @@ msgstr "Abgeschlossen"
 msgid "responsibility"
 msgstr "Zuständigkeit"
 
-#. Default: "Enter the ending date and time, or click the calendar icon and select it."
+#. Default: "Enter the ending date and time,                           or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:51
+#, fuzzy
 msgid "task_help_end_date"
 msgstr "Geben sie das Enddatum ein oder klicken sie auf das Kalender Icon und wählen sie es aus"
 
@@ -83,6 +109,11 @@ msgstr ""
 #: ./ftw/task/content/task.py:64
 msgid "task_help_responsibility"
 msgstr "Wählen sie die zuständige(n) Persone(n) aus."
+
+#. Default: "Enter the starting date and time, or click the calendar icon and select it."
+#: ./ftw/task/content/task.py:38
+msgid "task_help_start_date"
+msgstr ""
 
 #: ./ftw/task/content/task.py:28
 msgid "task_help_text"
@@ -112,5 +143,3 @@ msgstr "Aufgaben start"
 #: ./ftw/task/content/task.py:27
 msgid "task_label_text"
 msgstr "Text"
-
-
