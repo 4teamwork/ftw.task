@@ -12,6 +12,7 @@ from Products.CMFCore import utils
 # like _(u"message") will then be extracted by i18n tools for translation.
 
 taskMessageFactory = MessageFactory('ftw.task')
+_ = taskMessageFactory
 
 
 def initialize(context):
