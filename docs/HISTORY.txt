@@ -5,7 +5,8 @@ Changelog
 2.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix manifest.in
+  [mathias.leimgruber]
 
 
 2.3.2 (2012-03-19)
