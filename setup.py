@@ -7,6 +7,7 @@ maintainer = 'Mathias Leimgruber'
 tests_require = [
     'collective.testcaselayer',
     'plone.app.testing',
+    'Products.PloneTestCase',
     'ftw.testing',
     'ftw.workspace',
     'ftw.pdfgenerator'
