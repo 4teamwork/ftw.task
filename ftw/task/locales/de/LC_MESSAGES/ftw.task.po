@@ -97,9 +97,8 @@ msgstr "Zuständigkeit"
 
 #. Default: "Enter the ending date and time,                           or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:51
-#, fuzzy
 msgid "task_help_end_date"
-msgstr "Geben sie das Enddatum ein oder klicken sie auf das Kalender Icon und wählen sie es aus"
+msgstr "Geben Sie das Enddatum ein oder klicken Sie auf das Kalender Icon um ein Datum auszuwählen."
 
 #: ./ftw/task/content/task.py:82
 msgid "task_help_related_items"
@@ -108,7 +107,7 @@ msgstr ""
 #. Default: "Select the responsible person(s)."
 #: ./ftw/task/content/task.py:64
 msgid "task_help_responsibility"
-msgstr "Wählen sie die zuständige(n) Persone(n) aus."
+msgstr "Wählen Sie die zuständige(n) Persone(n) aus."
 
 #. Default: "Enter the starting date and time, or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:38
@@ -137,7 +136,7 @@ msgstr "Zuständigkeit"
 #. Default: "Start of Task"
 #: ./ftw/task/content/task.py:37
 msgid "task_label_start_date"
-msgstr "Aufgaben start"
+msgstr "Aufgaben Start"
 
 #. Default: "Text"
 #: ./ftw/task/content/task.py:27
