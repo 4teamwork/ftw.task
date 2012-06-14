@@ -3,18 +3,18 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="ftw.task">
 
-  <!-- Ensure Plone's portlets ZCML has already been processed;
-       without this, we may get a permission lookup error -->
-  <include package="plone.app.portlets" />
+    <!-- Ensure Plone's portlets ZCML has already been processed;
+         without this, we may get a permission lookup error -->
+    <include package="plone.app.portlets" />
 
 
-  <plone:portlet
-      name="ftw.task.portlets.mytasks"
-      interface=".mytasks.IMyTasksPortlet"
-      assignment=".mytasks.Assignment"
-      view_permission="zope2.View"
-      renderer=".mytasks.Renderer"
-      addview="ftw.task.portlets.mytasks.AddForm"
-      />
+    <plone:portlet
+        name="ftw.task.portlets.mytasks"
+        interface=".mytasks.IMyTasksPortlet"
+        assignment=".mytasks.Assignment"
+        view_permission="zope2.View"
+        renderer=".mytasks.Renderer"
+        addview="ftw.task.portlets.mytasks.AddForm"
+        />
 
 </configure>

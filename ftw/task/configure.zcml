@@ -37,9 +37,6 @@
         description=""
         handler="ftw.task.setuphandlers.import_various" />
 
-
-    <!-- -*- extra stuff goes here -*- -->
-
     <utility
         component=".vocabularies.AvailableUsersVocabularyFactory"
         name="ftw.task.users"

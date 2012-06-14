@@ -51,7 +51,6 @@ class TasksListing(object):
                 'end': localize_time(brain.end),
                 'responsibility': ', '.join(responsibility)}
 
-
     def _brains(self):
         catalog = getToolByName(self.context, 'portal_catalog')
         query = {'path': '/'.join(self.context.getPhysicalPath()),

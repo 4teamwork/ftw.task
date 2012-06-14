@@ -11,11 +11,12 @@ def getUserInfos(context, userid):
         fullname = user.getProperty('fullname', '')
         if not fullname:
             fullname = userid
-        return {'name': fullname,
-                'url': '%s/author/%s' % (
-                    context.portal_url(),
-                    user.id,
-                ),}
+        return {
+            'name': fullname,
+            'url': '%s/author/%s' % (
+                context.portal_url(),
+                user.id)}
+
     else:
         catalog = getToolByName(context, 'portal_catalog')
         brains = catalog(dict(UID=userid))

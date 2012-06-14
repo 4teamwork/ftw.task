@@ -1,11 +1,10 @@
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from ftw.task import taskMessageFactory as _
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
-from zope.interface import implements
 from zope.component import getMultiAdapter
-
-from ftw.task import taskMessageFactory as _
+from zope.interface import implements
 
 
 class IMyTasksPortlet(IPortletDataProvider):
@@ -68,7 +67,7 @@ class AddForm(base.NullAddForm):
     label = _(u"label_add_mytasks_portlet",
               default=u"Add My Tasks Portlet")
     description = _(u"help_add_mytasks_portlet",
-                default=u"This portlet displays the user's tasks.")
+                    default=u"This portlet displays the user's tasks.")
 
     def create(self):
         return Assignment()
