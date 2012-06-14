@@ -1,22 +1,25 @@
+
+    >>> portal = layer['portal']
+
 Add a Task
-    >>> self.setRoles(['Contributor'])
-    >>> self.portal.invokeFactory('Task', 't1')
+
+    >>> portal.invokeFactory('Task', 't1')
     't1'
-    >>> t1 = self.portal.get('t1')
+    >>> t1 = portal.get('t1')
     >>> t1
     <Task at ...>
 
 No we test, if the Responsibility have autmaticly owner rights
 
 first, we create the user hugoboss, because he would be the responsible of the task
-    >>> self.portal.acl_users._doAddUser('hugoboss', 'secret', ['Contributer'], [])
+    >>> portal.acl_users._doAddUser('hugoboss', 'secret', ['Contributer'], [])
     <PloneUser 'hugoboss'>
-    >>> self.portal.manage_setLocalRoles('hugoboss', ('Contributor', 'Editor'))
+    >>> portal.manage_setLocalRoles('hugoboss', ('Contributor', 'Editor'))
 
 then we create a task, and set 'hugoboss' as responsible
-    >>> self.portal.invokeFactory('Task', 't2')
+    >>> portal.invokeFactory('Task', 't2')
     't2'
-    >>> t2 = self.portal.get('t2')
+    >>> t2 = portal.get('t2')
     >>> t2.setResponsibility(['hugoboss'])
 
 and now we check if the user 'hugoboss' has the owner role
