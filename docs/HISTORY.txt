@@ -5,10 +5,11 @@ Changelog
 2.3.5 (unreleased)
 ------------------
 
-- Testing: use p.a.testing instead of PloneTestCase.
+- Fix template when task has no workflow.
   [jone]
 
-- Nothing changed yet.
+- Testing: use p.a.testing instead of PloneTestCase.
+  [jone]
 
 
 2.3.4 (2012-06-13)

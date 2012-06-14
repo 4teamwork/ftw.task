@@ -27,9 +27,12 @@
                         <th i18n:translate="">Title</th>
                         <td><p tal:content="here/Title" /></td>
                     </tr>
-                    <tr>
+                    <tr tal:define="workflow_state context/@@plone_context_state/workflow_state"
+                        tal:condition="workflow_state">
                         <th i18n:translate="">State</th>
-                        <td><p i18n:translate="" tal:content="python:context.portal_workflow.getInfoFor(context, 'review_state')" /></td>
+                        <td>
+                            <p i18n:translate="" tal:content="workflow_state" />
+                        </td>
                     </tr>
 
 
