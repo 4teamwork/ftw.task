@@ -47,7 +47,7 @@ class TestTaskView(TestCase):
         self.assertIn('State', self.browser.contents)
 
     def test_text_is_in_view(self):
-        self.task.setText('Hello <b>World</b>')
+        self.task.setText('Hello <b>World</b>', mimetype='text/html')
         transaction.commit()
 
         self.browser.open(self.url)
