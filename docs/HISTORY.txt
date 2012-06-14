@@ -5,6 +5,9 @@ Changelog
 2.3.5 (unreleased)
 ------------------
 
+- Add task view tests.
+  [jone]
+
 - Fix template when task has no workflow.
   [jone]
 

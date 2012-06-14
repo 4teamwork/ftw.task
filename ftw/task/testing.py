@@ -1,4 +1,5 @@
 from ftw.testing.layer import ComponentRegistryLayer
+from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
@@ -52,4 +53,6 @@ class FtwTaskLayer(PloneSandboxLayer):
 
 FTW_TASK_FIXTURE = FtwTaskLayer()
 FTW_TASK_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(FTW_TASK_FIXTURE, ), name="FtwTask:Integration")
+    bases=(FTW_TASK_FIXTURE,), name="FtwTask:Integration")
+FTW_TASK_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(FTW_TASK_FIXTURE,), name='FtwTask:Functional')
