@@ -8,9 +8,6 @@ from zope.configuration import xmlconfig
 
 
 class LatexZCMLLayer(ComponentRegistryLayer):
-    """A layer which only sets up the zcml, but does not start a zope
-    instance.
-    """
 
     def setUp(self):
         super(LatexZCMLLayer, self).setUp()
@@ -20,6 +17,17 @@ class LatexZCMLLayer(ComponentRegistryLayer):
 
 
 LATEX_ZCML_LAYER = LatexZCMLLayer()
+
+
+class ZCMLLayer(ComponentRegistryLayer):
+
+    def setUp(self):
+        super(ZCMLLayer, self).setUp()
+        import ftw.task.tests
+        self.load_zcml_file('test.zcml', ftw.task.tests)
+
+
+ZCML_LAYER = ZCMLLayer()
 
 
 class FtwTaskLayer(PloneSandboxLayer):
