@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+    <include package="zope.traversing" />
+    <include package="ftw.pdfgenerator.tests" file="test.zcml" />
+    <include package="ftw.pdfgenerator" />
+
+    <include package="ftw.task.latex" />
+
+</configure>
