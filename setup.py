@@ -21,7 +21,7 @@ extras_require = {
 
 setup(name='ftw.task',
       version=version,
-      description='A simple task content type for plone.',
+      description='A simple task content type for Plone.',
       long_description=open('README.rst').read() + '\n' + \
           open(os.path.join('docs', 'HISTORY.txt')).read(),
 
@@ -41,7 +41,7 @@ setup(name='ftw.task',
       author='4teamwork GmbH',
       author_email='mailto:info@4teamwork.ch',
       maintainer=maintainer,
-      url='',
+      url='https://github.com/4teamwork/ftw.task',
       license='GPL2',
 
       packages=find_packages(exclude=['ez_setup']),
