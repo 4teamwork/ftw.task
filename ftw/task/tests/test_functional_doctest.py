@@ -1,16 +1,7 @@
-from Products.PloneTestCase import ptc
-from Testing import ZopeTestCase
-from ftw.task.tests import layer
+from ftw.task.testing import FTW_TASK_INTEGRATION_TESTING
+from plone.testing import layered
 import doctest
-import unittest
-
-
-MODULENAMES = ()
-
-
-TESTFILES = (
-    'task.txt',
-    )
+import unittest2 as unittest
 
 
 OPTIONFLAGS = (doctest.NORMALIZE_WHITESPACE |
@@ -19,26 +10,10 @@ OPTIONFLAGS = (doctest.NORMALIZE_WHITESPACE |
 
 
 def test_suite():
-
     suite = unittest.TestSuite()
-
-    for testfile in TESTFILES:
-        fdfs = ZopeTestCase.FunctionalDocFileSuite(
-            testfile,
-            optionflags=OPTIONFLAGS,
-            test_class=ptc.FunctionalTestCase,)
-        fdfs.layer = layer.layer
-        suite.addTest(fdfs)
-
-    for module in MODULENAMES:
-        fdts = ZopeTestCase.FunctionalDocTestSuite(
-            module,
-            optionflags=OPTIONFLAGS,
-            test_class=ptc.FunctionalTestCase)
-        fdts.layer = layer.layer
-        suite.addTest(fdts)
-
+    suite.addTests([
+            layered(doctest.DocFileSuite('task.txt',
+                                         optionflags=OPTIONFLAGS),
+                    layer=FTW_TASK_INTEGRATION_TESTING),
+            ])
     return suite
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')

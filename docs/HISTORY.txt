@@ -5,6 +5,9 @@ Changelog
 2.3.5 (unreleased)
 ------------------
 
+- Testing: use p.a.testing instead of PloneTestCase.
+  [jone]
+
 - Nothing changed yet.
 
 
