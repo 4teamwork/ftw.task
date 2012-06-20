@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.5 (unreleased)
+2.3.5 (2012-06-20)
 ------------------
 
 - Add task view tests.
