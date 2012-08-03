@@ -5,7 +5,8 @@ Changelog
 2.3.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make Portlet work with Users that don't Userid as Loginname.
+  [tschanzt]
 
 
 2.3.5 (2012-06-20)

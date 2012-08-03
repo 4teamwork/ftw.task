@@ -58,7 +58,7 @@ class Renderer(base.Renderer):
         catalog = getToolByName(self.context, 'portal_catalog')
         mt = getToolByName(self.context, 'portal_membership')
         member = mt.getAuthenticatedMember()
-        username = member.getUserName()
+        username = member.getUserId()
         tasks = catalog(portal_type="Task", getResponsibility=username)
         return tasks
 
