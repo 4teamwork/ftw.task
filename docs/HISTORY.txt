@@ -5,6 +5,9 @@ Changelog
 2.3.6 (unreleased)
 ------------------
 
+- Use ftw.calendarwidget for datetime fields. 
+  [mathias.leimgruber]
+
 - Make Portlet work with Users that don't Userid as Loginname.
   [tschanzt]
 

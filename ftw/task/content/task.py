@@ -11,6 +11,7 @@ from ftw.task import taskMessageFactory as _
 from ftw.task.config import PROJECTNAME
 from ftw.task.interfaces import ITask
 from zope.interface import implements
+from ftw.calendarwidget.browser.widgets import FtwCalendarWidget
 
 
 TaskSchema = document.ATDocumentSchema.copy() + \
@@ -35,7 +36,7 @@ TaskSchema = document.ATDocumentSchema.copy() + \
             accessor='start',
             default_method='default_start_date',
 
-            widget=atapi.CalendarWidget(
+            widget=FtwCalendarWidget(
                 label=_(u'task_label_start_date', default=u'Start of Task'),
                 description=_(u'task_help_start_date',
                               default=u'Enter the starting date and time, '
@@ -49,7 +50,7 @@ TaskSchema = document.ATDocumentSchema.copy() + \
             accessor='end',
             default_method='default_end_date',
 
-            widget=atapi.CalendarWidget(
+            widget=FtwCalendarWidget(
                 label=_(u'task_label_end_date', default=u'End of Task'),
                 description=_(u'task_help_end_date',
                               default=u'Enter the ending date and time, '
