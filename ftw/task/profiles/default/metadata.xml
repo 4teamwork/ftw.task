@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>1.0</version>
+  <version>2001</version>
+  <dependencies>
+     <dependency>profile-Products.DataGridField:default</dependency>
+     <dependency>profile-ftw.calendarwidget:default</dependency>
+  </dependencies>  
 </metadata>
