@@ -38,6 +38,10 @@ class FtwTaskLayer(PloneSandboxLayer):
         xmlconfig.file('configure.zcml', plone.principalsource,
                        context=configurationContext)
 
+        import ftw.calendarwidget
+        xmlconfig.file('configure.zcml', ftw.calendarwidget,
+                       context=configurationContext)
+
         import ftw.task
         xmlconfig.file('configure.zcml', ftw.task,
                        context=configurationContext)
