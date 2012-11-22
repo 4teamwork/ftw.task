@@ -7,12 +7,12 @@
       	<span class="title"
           i18n:translate="box_mytasks">My Tasks</span>
       <span class="portletTopRight"></span>
-    
+
     </dt>
 
     <tal:items tal:repeat="item items">
 
-        <dd class="portletItem" 
+        <dd class="portletItem"
             tal:define="oddrow repeat/item/odd;"
             tal:attributes="class python:oddrow and  'portletItem even' or 'portletItem odd';
                             id string:${item/id}">
@@ -20,17 +20,15 @@
                 <a href=""
                    tal:attributes="href item/getURL;
                                    title item/Title;">
-                    <tal:title content="item/Title">
-                        Title
-                    </tal:title>
+                    <tal:title content="item/Title" />
                 </a>
             </span>
         </dd>
     </tal:items>
 
-    <dd class="portletItemEmpty portletItem" 
+    <dd class="portletItemEmpty portletItem"
         tal:condition="not:items">
-        
+
         <span class="noEntries" i18n:translate="box_no_task_items">
             No items.
         </span>
