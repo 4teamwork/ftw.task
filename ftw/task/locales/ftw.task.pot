@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-16 07:45+0000\n"
+"POT-Creation-Date: 2012-11-22 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ftw.task\n"
 
-#: ./ftw/task/browser/task.pt:42
+#: ./ftw/task/browser/task.pt:44
 msgid "End"
 msgstr ""
 
@@ -29,11 +29,11 @@ msgstr ""
 msgid "Task"
 msgstr ""
 
-#: ./ftw/task/browser/task.pt:38
+#: ./ftw/task/browser/task.pt:40
 msgid "Text"
 msgstr ""
 
-#: ./ftw/task/browser/task.pt:28
+#: ./ftw/task/browser/task.pt:27
 msgid "Title"
 msgstr ""
 
@@ -46,12 +46,12 @@ msgid "box_mytasks"
 msgstr ""
 
 #. Default: "No items."
-#: ./ftw/task/portlets/mytasks.pt:34
+#: ./ftw/task/portlets/mytasks.pt:32
 msgid "box_no_task_items"
 msgstr ""
 
 #. Default: "This portlet displays the user's tasks."
-#: ./ftw/task/portlets/mytasks.py:70
+#: ./ftw/task/portlets/mytasks.py:74
 msgid "help_add_mytasks_portlet"
 msgstr ""
 
@@ -59,12 +59,12 @@ msgid "inactive"
 msgstr ""
 
 #. Default: "Add My Tasks Portlet"
-#: ./ftw/task/portlets/mytasks.py:68
+#: ./ftw/task/portlets/mytasks.py:72
 msgid "label_add_mytasks_portlet"
 msgstr ""
 
 #. Default: "My Tasks Portlet"
-#: ./ftw/task/portlets/mytasks.py:33
+#: ./ftw/task/portlets/mytasks.py:34
 msgid "label_mytasks_portlet"
 msgstr ""
 
@@ -96,55 +96,55 @@ msgstr ""
 msgid "resolved"
 msgstr ""
 
-#: ./ftw/task/browser/task.pt:46
+#: ./ftw/task/browser/task.pt:48
 msgid "responsibility"
 msgstr ""
 
-#. Default: "Enter the ending date and time,                           or click the calendar icon and select it."
-#: ./ftw/task/content/task.py:51
+#. Default: "Enter the ending date and time, or click the calendar icon and select it."
+#: ./ftw/task/content/task.py:55
 msgid "task_help_end_date"
 msgstr ""
 
-#: ./ftw/task/content/task.py:82
+#: ./ftw/task/content/task.py:88
 msgid "task_help_related_items"
 msgstr ""
 
 #. Default: "Select the responsible person(s)."
-#: ./ftw/task/content/task.py:64
+#: ./ftw/task/content/task.py:70
 msgid "task_help_responsibility"
 msgstr ""
 
 #. Default: "Enter the starting date and time, or click the calendar icon and select it."
-#: ./ftw/task/content/task.py:38
+#: ./ftw/task/content/task.py:41
 msgid "task_help_start_date"
 msgstr ""
 
-#: ./ftw/task/content/task.py:28
+#: ./ftw/task/content/task.py:30
 msgid "task_help_text"
 msgstr ""
 
 #. Default: "End of Task"
-#: ./ftw/task/content/task.py:50
+#: ./ftw/task/content/task.py:54
 msgid "task_label_end_date"
 msgstr ""
 
 #. Default: "Related Items"
-#: ./ftw/task/content/task.py:81
+#: ./ftw/task/content/task.py:87
 msgid "task_label_related_items"
 msgstr ""
 
 #. Default: "Responsibility"
-#: ./ftw/task/content/task.py:62
+#: ./ftw/task/content/task.py:68
 msgid "task_label_responsibility"
 msgstr ""
 
 #. Default: "Start of Task"
-#: ./ftw/task/content/task.py:37
+#: ./ftw/task/content/task.py:40
 msgid "task_label_start_date"
 msgstr ""
 
 #. Default: "Text"
-#: ./ftw/task/content/task.py:27
+#: ./ftw/task/content/task.py:29
 msgid "task_label_text"
 msgstr ""
 
