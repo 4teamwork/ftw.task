@@ -15,7 +15,6 @@ tests_require = [
     'zope.configuration',
     'zope.traversing',
     'Products.CMFPlone',
-    'Products.Five',
     'Products.GenericSetup',
 
     'ftw.workspace',
