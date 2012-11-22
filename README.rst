@@ -3,6 +3,12 @@ Introduction
 
 ``ftw.task`` provides a simple task content type for Plone.
 
+Compatiblity
+------------
+
+**Workspace / PDF**: When installed with with `ftw.workspace`_ and `ftw.pdfgenerator`_
+it provides a listing in the workspace details PDF.
+
 
 Usage
 -----
@@ -34,3 +40,5 @@ Copyright
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
 ``ftw.task`` is licensed under GNU General Public License, version 2.
+
+.. _ftw.workspace: http://github.com/4teamwork/ftw.workspace
