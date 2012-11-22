@@ -1,3 +1,5 @@
+from AccessControl import getSecurityManager
+from AccessControl.SpecialUsers import nobody
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from ftw.task import taskMessageFactory as _
@@ -51,14 +53,17 @@ class Renderer(base.Renderer):
 
     @property
     def available(self):
-        return True
+        user = getSecurityManager().getUser()
+        return user != nobody
 
-    @property
     def items(self):
         catalog = getToolByName(self.context, 'portal_catalog')
-        mt = getToolByName(self.context, 'portal_membership')
-        member = mt.getAuthenticatedMember()
-        username = member.getUserId()
+
+        user = getSecurityManager().getUser()
+        if user == nobody:
+            return []
+
+        username = user.getId()
         tasks = catalog(portal_type="Task", getResponsibility=username)
         return tasks
 
