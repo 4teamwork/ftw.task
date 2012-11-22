@@ -5,16 +5,32 @@ version = '2.4.2.dev0'
 maintainer = 'Mathias Leimgruber'
 
 tests_require = [
-    'plone.app.testing',
+    'unittest2',
+    'mocker',
     'ftw.testing',
+    'plone.testing',
+    'plone.app.testing',
+
+    'transaction',
+    'zope.configuration',
+    'zope.traversing',
+    'Products.CMFPlone',
+    'Products.Five',
+    'Products.GenericSetup',
+
     'ftw.workspace',
-    'ftw.pdfgenerator'
+    'ftw.pdfgenerator',
     ]
 
 extras_require = {
     'tests': tests_require,
+
     'pdf': [
         'ftw.pdfgenerator',
+        ],
+
+    'workspace': [
+        'ftw.workspace',
         ]}
 
 setup(name='ftw.task',
@@ -49,8 +65,28 @@ setup(name='ftw.task',
 
       install_requires=[
         'setuptools',
+
+        # Zope
+        'AccessControl',
+        'Zope2',
+        'zope.app.component',
+        'zope.component',
+        'zope.i18n',
+        'zope.i18nmessageid',
+        'zope.interface',
+        'zope.schema',
+
+        # Plone
+        'Products.ATContentTypes',
+        'Products.Archetypes',
+        'Products.CMFCore',
         'Products.ATReferenceBrowserWidget',
         'plone.principalsource',
+        'plone.app.contentmenu',
+        'plone.app.portlets',
+        'plone.portlets',
+
+        # Addons
         'ftw.calendarwidget',
         'ftw.upgrade',
         ],
