@@ -52,6 +52,7 @@ setup(name='ftw.task',
         'Products.ATReferenceBrowserWidget',
         'plone.principalsource',
         'ftw.calendarwidget',
+        'ftw.upgrade',
         ],
 
       tests_require=tests_require,
