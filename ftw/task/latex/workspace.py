@@ -30,7 +30,10 @@ class TasksListing(object):
                          context=self.request)
 
     def get_listing(self):
-        return self.view.convert(self.template())
+        if len(self._brains()) == 0:
+            return None
+        else:
+            return self.view.convert(self.template())
 
     def get_items(self):
         acl_users = getToolByName(self.context, 'acl_users')

@@ -4,6 +4,9 @@ Changelog
 2.4.2 (unreleased)
 ------------------
 
+- Workspace details PDF: do not show empty listings.
+  [jone]
+
 - Fix task portlet for anonymous users and zope users. #5
   [jone]
 
