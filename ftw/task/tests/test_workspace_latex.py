@@ -57,9 +57,12 @@ class TestTasksListing(MockTestCase):
 
         self.tasks = []
         def get_catalog_result(query):
+            brains = []
             for obj in self.tasks:
-                yield self.create_dummy(getObject=lambda x=obj: obj,
-                                        **obj.__dict__)
+                brains.append(self.create_dummy(getObject=lambda x=obj: x,
+                                                **obj.__dict__))
+
+            return brains
 
         self.expect(portal_catalog(
                 {'path': '/path/to/workspace',
