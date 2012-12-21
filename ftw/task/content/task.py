@@ -22,7 +22,10 @@ TaskSchema = document.ATDocumentSchema.copy() + \
             searchable=True,
             required=False,
             default_content_type='text/html',
-            default_output_type='text/html',
+            allowable_content_types=('text/html',),
+            validators=('isTidyHtmlWithCleanup', ),
+            default_output_type='text/x-html-safe',
+            default_input_type='text/html',
             storage=atapi.AnnotationStorage(),
 
             widget=atapi.RichWidget(
