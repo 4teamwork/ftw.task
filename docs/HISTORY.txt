@@ -4,6 +4,9 @@ Changelog
 2.4.2 (unreleased)
 ------------------
 
+- onegov.ch approved: add badge to readme.
+  [jone]
+
 - Use safe-html-transform for textfield (security audit).
   [mathias.leimgruber]
 

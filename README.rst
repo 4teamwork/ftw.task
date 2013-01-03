@@ -3,6 +3,12 @@ Introduction
 
 ``ftw.task`` provides a simple task content type for Plone.
 
+.. figure:: http://onegov.ch/approved.png/image
+   :align: right
+   :target: http://onegov.ch/community/zertifizierte-module/ftw.task
+
+   Certified: 01/2013
+
 Compatiblity
 ------------
 
