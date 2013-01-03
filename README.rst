@@ -42,3 +42,4 @@ This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 ``ftw.task`` is licensed under GNU General Public License, version 2.
 
 .. _ftw.workspace: http://github.com/4teamwork/ftw.workspace
+.. _ftw.pdfgenerator: http://github.com/4teamwork/ftw.pdfgenerator
