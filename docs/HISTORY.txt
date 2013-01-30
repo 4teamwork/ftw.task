@@ -4,6 +4,9 @@ Changelog
 2.4.2 (unreleased)
 ------------------
 
+- Hide fields in task, using a dictionary instead of False or -1.
+  [Julian Infanger]
+
 - onegov.ch approved: add badge to readme.
   [jone]
 
