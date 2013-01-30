@@ -118,7 +118,8 @@ hide_fields = ['description',
 
 for item in hide_fields:
     TaskSchema.changeSchemataForField(item, 'default')
-    TaskSchema[item].widget.visible = False
+    TaskSchema[item].widget.visible = {'edit':'invisible',
+                                       'view':'invisible'}
 
 
 class Task(document.ATDocument):
