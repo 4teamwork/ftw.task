@@ -49,3 +49,7 @@ This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
 .. _ftw.workspace: http://github.com/4teamwork/ftw.workspace
 .. _ftw.pdfgenerator: http://github.com/4teamwork/ftw.pdfgenerator
+
+.. image:: https://cruel-carlota.pagodabox.com/24017c820e52b53f95c5367b05b1e3af
+   :alt: githalytics.com
+   :target: http://githalytics.com/4teamwork/ftw.task
