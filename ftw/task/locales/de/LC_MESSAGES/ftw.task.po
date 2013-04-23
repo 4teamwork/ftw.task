@@ -99,7 +99,7 @@ msgstr "Zuständigkeit"
 #: ./ftw/task/content/task.py:55
 #, fuzzy
 msgid "task_help_end_date"
-msgstr "Geben Sie das Enddatum ein oder klicken Sie auf das Kalender Icon um ein Datum auszuwählen."
+msgstr "Geben Sie das Enddatum ein oder klicken Sie auf das Kalendersymbol um ein Datum auszuwählen."
 
 #: ./ftw/task/content/task.py:88
 msgid "task_help_related_items"
