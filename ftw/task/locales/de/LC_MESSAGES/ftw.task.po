@@ -97,7 +97,6 @@ msgstr "Zuständigkeit"
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:55
-#, fuzzy
 msgid "task_help_end_date"
 msgstr "Geben Sie das Enddatum ein oder klicken Sie auf das Kalendersymbol um ein Datum auszuwählen."
 
