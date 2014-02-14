@@ -11,7 +11,8 @@ Changelog
 2.4.5 (2013-10-16)
 ------------------
 
-- Nothing changed yet.
+- Add French translations.
+  [tschanzt]
 
 
 2.4.4 (2013-08-14)
