@@ -14,54 +14,54 @@ msgstr ""
 
 #: ./ftw/task/browser/task.pt:44
 msgid "End"
-msgstr ""
+msgstr "Maturité"
 
 #: ./ftw/task/browser/task.pt:32
 msgid "State"
-msgstr ""
+msgstr "Etat"
 
 #: ./ftw/task/profiles/default/types/Task.xml
 msgid "Task"
-msgstr ""
+msgstr "Tâche"
 
 #: ./ftw/task/browser/task.pt:40
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: ./ftw/task/browser/task.pt:27
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 msgid "active"
-msgstr ""
+msgstr "Active"
 
 #. Default: "My Tasks"
 #: ./ftw/task/portlets/mytasks.pt:7
 msgid "box_mytasks"
-msgstr ""
+msgstr "Mes tâches"
 
 #. Default: "No items."
 #: ./ftw/task/portlets/mytasks.pt:32
 msgid "box_no_task_items"
-msgstr ""
+msgstr "Aucun tâche"
 
 #. Default: "This portlet displays the user's tasks."
 #: ./ftw/task/portlets/mytasks.py:74
 msgid "help_add_mytasks_portlet"
-msgstr ""
+msgstr "Ce portlet affiche les tâches attribuées à l'utilisateur."
 
 msgid "inactive"
-msgstr ""
+msgstr "inactive"
 
 #. Default: "Add My Tasks Portlet"
 #: ./ftw/task/portlets/mytasks.py:72
 msgid "label_add_mytasks_portlet"
-msgstr "Ajouter Mes tâches portlet"
+msgstr "Ajouter portlet mes tâches"
 
 #. Default: "My Tasks Portlet"
 #: ./ftw/task/portlets/mytasks.py:34
 msgid "label_mytasks_portlet"
-msgstr "Outil mes tâches"
+msgstr "Portlet mes tâches"
 
 #. Default: "Tasks"
 #: ./ftw/task/latex/workspace.py:29
@@ -89,11 +89,11 @@ msgid "latex_tasks_title"
 msgstr "Titre"
 
 msgid "resolved"
-msgstr "Renvois"
+msgstr "terminé"
 
 #: ./ftw/task/browser/task.pt:48
 msgid "responsibility"
-msgstr "Responsable"
+msgstr "Responsabilité"
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
 #: ./ftw/task/content/task.py:55
@@ -131,7 +131,7 @@ msgstr "Renvois"
 #. Default: "Responsibility"
 #: ./ftw/task/content/task.py:68
 msgid "task_label_responsibility"
-msgstr "Responsable"
+msgstr "Responsabilité"
 
 #. Default: "Start of Task"
 #: ./ftw/task/content/task.py:40
