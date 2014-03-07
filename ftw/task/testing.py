@@ -8,18 +8,6 @@ from plone.testing import z2
 from zope.configuration import xmlconfig
 
 
-class LatexZCMLLayer(ComponentRegistryLayer):
-
-    def setUp(self):
-        super(LatexZCMLLayer, self).setUp()
-        import ftw.task.tests
-
-        self.load_zcml_file('latex_test.zcml', ftw.task.tests)
-
-
-LATEX_ZCML_LAYER = LatexZCMLLayer()
-
-
 class ZCMLLayer(ComponentRegistryLayer):
 
     def setUp(self):
