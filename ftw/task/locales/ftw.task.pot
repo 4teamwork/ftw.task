@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-11-22 16:06+0000\n"
+"POT-Creation-Date: 2014-03-07 13:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,10 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: ftw.task\n"
 
 #: ./ftw/task/browser/task.pt:44
 msgid "End"
@@ -68,6 +65,31 @@ msgstr ""
 msgid "label_mytasks_portlet"
 msgstr ""
 
+#. Default: "Creator"
+#: ./ftw/task/browser/tasktab.py:42
+msgid "label_taskstab_creator"
+msgstr ""
+
+#. Default: "End"
+#: ./ftw/task/browser/tasktab.py:25
+msgid "label_taskstab_end_date"
+msgstr ""
+
+#. Default: "Responsibility"
+#: ./ftw/task/browser/tasktab.py:31
+msgid "label_taskstab_responsibility"
+msgstr ""
+
+#. Default: "State"
+#: ./ftw/task/browser/tasktab.py:36
+msgid "label_taskstab_review_state"
+msgstr ""
+
+#. Default: "Title"
+#: ./ftw/task/browser/tasktab.py:20
+msgid "label_taskstab_title"
+msgstr ""
+
 #. Default: "Tasks"
 #: ./ftw/task/latex/workspace.py:29
 msgid "latex_label_events"
@@ -101,50 +123,51 @@ msgid "responsibility"
 msgstr ""
 
 #. Default: "Enter the ending date and time, or click the calendar icon and select it."
-#: ./ftw/task/content/task.py:55
+#: ./ftw/task/content/task.py:58
 msgid "task_help_end_date"
 msgstr ""
 
-#: ./ftw/task/content/task.py:88
+#: ./ftw/task/content/task.py:91
 msgid "task_help_related_items"
 msgstr ""
 
 #. Default: "Select the responsible person(s)."
-#: ./ftw/task/content/task.py:70
+#: ./ftw/task/content/task.py:73
 msgid "task_help_responsibility"
 msgstr ""
 
 #. Default: "Enter the starting date and time, or click the calendar icon and select it."
-#: ./ftw/task/content/task.py:41
+#: ./ftw/task/content/task.py:44
 msgid "task_help_start_date"
 msgstr ""
 
-#: ./ftw/task/content/task.py:30
+#: ./ftw/task/content/task.py:33
 msgid "task_help_text"
 msgstr ""
 
 #. Default: "End of Task"
-#: ./ftw/task/content/task.py:54
+#: ./ftw/task/content/task.py:57
 msgid "task_label_end_date"
 msgstr ""
 
 #. Default: "Related Items"
-#: ./ftw/task/content/task.py:87
+#: ./ftw/task/content/task.py:90
 msgid "task_label_related_items"
 msgstr ""
 
 #. Default: "Responsibility"
-#: ./ftw/task/content/task.py:68
+#: ./ftw/task/content/task.py:71
 msgid "task_label_responsibility"
 msgstr ""
 
 #. Default: "Start of Task"
-#: ./ftw/task/content/task.py:40
+#: ./ftw/task/content/task.py:43
 msgid "task_label_start_date"
 msgstr ""
 
 #. Default: "Text"
-#: ./ftw/task/content/task.py:29
+#: ./ftw/task/content/task.py:32
 msgid "task_label_text"
 msgstr ""
+
 
