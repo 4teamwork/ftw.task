@@ -10,6 +10,7 @@ tests_require = [
     'ftw.testing',
     'plone.testing',
     'plone.app.testing',
+    'ftw.builder',
 
     'transaction',
     'zope.configuration',
@@ -19,6 +20,8 @@ tests_require = [
 
     'ftw.workspace',
     'ftw.pdfgenerator',
+    'ftw.tabbedview',
+    'ftw.table',
     ]
 
 extras_require = {
