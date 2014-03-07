@@ -41,10 +41,15 @@ class FtwTaskLayer(PloneSandboxLayer):
         xmlconfig.file('configure.zcml', ftw.task,
                        context=configurationContext)
 
+        import ftw.tabbedview
+        xmlconfig.file('configure.zcml', ftw.tabbedview,
+                       context=configurationContext)
+
         z2.installProduct(app, 'ftw.task')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'ftw.task:default')
+        applyProfile(portal, 'ftw.tabbedview:default')
 
         setRoles(portal, TEST_USER_ID, ['Manager'])
         login(portal, TEST_USER_NAME)

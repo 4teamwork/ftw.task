@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="ftw.task">
 
@@ -12,4 +13,14 @@
         permission="zope2.View"
         template="task.pt"
         />
+
+    <configure zcml:condition="installed ftw.tabbedview">
+        <browser:page
+            for="*"
+            name="tabbedview_view-tasks"
+            class=".tasktab.TaskTab"
+            permission="zope2.View"
+            />
+    </configure>
+
 </configure>
