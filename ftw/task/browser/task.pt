@@ -31,7 +31,7 @@
                         tal:condition="workflow_state">
                         <th i18n:translate="">State</th>
                         <td>
-                            <p i18n:translate="" tal:content="workflow_state" />
+                            <p i18n:domain="plone" i18n:translate="" tal:content="workflow_state" />
                         </td>
                     </tr>
 
