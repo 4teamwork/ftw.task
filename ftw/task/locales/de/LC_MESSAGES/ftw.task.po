@@ -145,7 +145,7 @@ msgstr ""
 #. Default: "End of Task"
 #: ./ftw/task/content/task.py:57
 msgid "task_label_end_date"
-msgstr "Aufgaben Ende"
+msgstr "Fälligkeit"
 
 #. Default: "Related Items"
 #: ./ftw/task/content/task.py:90
