@@ -34,9 +34,9 @@ Usage
 Links
 -----
 
-- Main github project repository: https://github.com/4teamwork/ftw.task
-- Issue tracker: https://github.com/4teamwork/ftw.task/issues
-- Package on pypi: http://pypi.python.org/pypi/ftw.task
+- Github: https://github.com/4teamwork/ftw.task
+- Issues: https://github.com/4teamwork/ftw.task/issues
+- Pypi: http://pypi.python.org/pypi/ftw.task
 - Continuous integration: https://jenkins.4teamwork.ch/search?q=ftw.task
 
 
