@@ -29,21 +29,13 @@ class FtwTaskLayer(PloneSandboxLayer):
     defaultBases = (PLONE_FIXTURE, BUILDER_LAYER)
 
     def setUpZope(self, app, configurationContext):
-        import plone.principalsource
-        xmlconfig.file('configure.zcml', plone.principalsource,
-                       context=configurationContext)
-
-        import ftw.calendarwidget
-        xmlconfig.file('configure.zcml', ftw.calendarwidget,
-                       context=configurationContext)
-
-        import ftw.task
-        xmlconfig.file('configure.zcml', ftw.task,
-                       context=configurationContext)
-
-        import ftw.tabbedview
-        xmlconfig.file('configure.zcml', ftw.tabbedview,
-                       context=configurationContext)
+        xmlconfig.string(
+            '<configure xmlns="http://namespaces.zope.org/zope">'
+            '  <include package="z3c.autoinclude" file="meta.zcml" />'
+            '  <includePlugins package="plone" />'
+            '  <includePluginsOverrides package="plone" />'
+            '</configure>',
+            context=configurationContext)
 
         z2.installProduct(app, 'ftw.task')
 
