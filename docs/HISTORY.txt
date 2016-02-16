@@ -10,7 +10,7 @@ Changelog
 2.4.7 (2014-09-15)
 ------------------
 
-- Nothing changed yet.
+- Update translations [msom]
 
 
 2.4.6 (2014-06-02)
