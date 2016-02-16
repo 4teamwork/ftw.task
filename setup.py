@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.4.8.dev0'
+version = '2.5.0.dev0'
 maintainer = 'Mathias Leimgruber'
 
 tests_require = [
@@ -46,8 +46,7 @@ setup(name='ftw.task',
       # http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         'Framework :: Plone',
-        'Framework :: Plone :: 4.1',
-        'Framework :: Plone :: 4.2',
+        'Framework :: Plone :: 4.3',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
