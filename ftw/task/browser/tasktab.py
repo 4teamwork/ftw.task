@@ -1,6 +1,14 @@
 from ftw.tabbedview.browser import listing
 from ftw.table import helper
+from ftw.task.browser.task import getUserInfos
 from ftw.task import _
+from plone import api
+
+
+def readable_responsible(item, persons):
+    portal = api.portal.get()
+    return ', '.join(
+        [getUserInfos(portal, person)['name'] for person in persons])
 
 
 class TaskTab(listing.CatalogListingView):
@@ -30,7 +38,7 @@ class TaskTab(listing.CatalogListingView):
         {'column': 'getResponsibility',
          'column_title': _(u'label_taskstab_responsibility',
                            default=u'Responsibility'),
-         'transform': helper.readable_author},
+         'transform': readable_responsible},
 
         {'column': 'review_state',
          'column_title': _(u'label_taskstab_review_state',

@@ -20,12 +20,15 @@ class TestTaskTab(TestCase):
                                       ('one_state_workflow',))
 
         self.john = create(Builder('user'))
+        self.bert = create(Builder('contact')
+                           .having(firstname='Bert', lastname='Bort'))
 
         self.task = create(Builder('task')
                            .titled('My task')
                            .having(text='<p>Text</p>')
                            .having(end_date=DateTime('2010/05/05'))
-                           .having(responsibility=self.john.getId()))
+                           .having(responsibility=(self.john.getId(),
+                                                   self.bert.UID())))
 
     @browsing
     def test_task_tab(self, browser):
@@ -35,7 +38,7 @@ class TestTaskTab(TestCase):
             [['Title', 'End', 'Responsibility', 'State', 'Creator'],
              [self.task.Title(),
               '05.05.2010 00:00',
-              self.john.getProperty('fullname'),
+              'Doe John, Bort Bert',
               'published',
               'test_user_1_']],
             browser.css('.listing').first.lists())

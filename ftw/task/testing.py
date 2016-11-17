@@ -11,6 +11,7 @@ from plone.app.testing import setRoles, TEST_USER_ID, TEST_USER_NAME, login
 from plone.testing import z2
 from zope.configuration import xmlconfig
 import ftw.task.tests.builders
+import egov.contactdirectory.tests.builders
 
 
 class ZCMLLayer(ComponentRegistryLayer):
@@ -38,10 +39,12 @@ class FtwTaskLayer(PloneSandboxLayer):
             context=configurationContext)
 
         z2.installProduct(app, 'ftw.task')
+        z2.installProduct(app, 'egov.contactdirectory')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'ftw.task:default')
         applyProfile(portal, 'ftw.tabbedview:default')
+        applyProfile(portal, 'egov.contactdirectory:default')
 
         setRoles(portal, TEST_USER_ID, ['Manager'])
         login(portal, TEST_USER_NAME)

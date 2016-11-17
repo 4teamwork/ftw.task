@@ -6,6 +6,8 @@ Changelog
 
 - Drop Plone 4.1 and 4.2 support. [jone]
 
+- Fix responsible field in tabbed view for contacts. [lknoepfel]
+
 
 2.4.7 (2014-09-15)
 ------------------
