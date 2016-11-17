@@ -23,6 +23,7 @@ tests_require = [
     'ftw.pdfgenerator',
     'ftw.tabbedview',
     'ftw.table',
+    'egov.contactdirectory',
     ]
 
 extras_require = {
