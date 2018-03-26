@@ -76,3 +76,6 @@ class AddForm(base.NullAddForm):
 
     def create(self):
         return Assignment()
+
+    def referer(self):
+        return self.request.get('referer', '')
