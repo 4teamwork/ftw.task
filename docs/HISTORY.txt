@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.0.1 (unreleased)
+3.0.1 (2018-03-26)
 ------------------
 
 - Workaround for adding portlets when "Products.PloneHotfix20160830" (1.3) is
